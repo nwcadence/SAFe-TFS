@@ -18,6 +18,7 @@
         <WORKITEMTYPE fileName="WorkItem Tracking\TypeDefinitions\Bug.xml" />
         <WORKITEMTYPE fileName="WorkItem Tracking\TypeDefinitions\CodeReviewRequest.xml" />
         <WORKITEMTYPE fileName="WorkItem Tracking\TypeDefinitions\CodeReviewResponse.xml" />
+		<WORKITEMTYPE fileName="WorkItem Tracking\TypeDefinitions\Epic.xml" />
         <WORKITEMTYPE fileName="WorkItem Tracking\TypeDefinitions\Feature.xml" />
         <WORKITEMTYPE fileName="WorkItem Tracking\TypeDefinitions\FeedbackRequest.xml" />
         <WORKITEMTYPE fileName="WorkItem Tracking\TypeDefinitions\FeedbackResponse.xml" />

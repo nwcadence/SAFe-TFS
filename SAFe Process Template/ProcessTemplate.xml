@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ProcessTemplate>
   <metadata>
-    <name>MSF for Agile Software Development 2013.3</name>
-    <description>This template is flexible and will work great for most teams using Agile planning methods, including those practicing Scrum.</description>
-    <version type="ADCC42AB-9882-485E-A3ED-7678F01F66BC" major="7" minor="20" />
+    <name>SAFe Process Template</name>
+    <description>v1.0.1: This template is designed to enable teams using the Scaled Agile Framework (SAFe). For more information on SAFe check out http://scaledagileframework.com. This template was customized from an MSF for Agile 2013.2 base.</description>
+    <version type="914ADC51-1338-4F06-8E25-B4542DE4215B" major="1" minor="0" />
     <plugins>
       <plugin name="Microsoft.ProjectCreationWizard.Classification" wizardPage="false" />
       <plugin name="Microsoft.ProjectCreationWizard.Reporting" wizardPage="false" />

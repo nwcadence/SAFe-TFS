@@ -17,7 +17,27 @@
     </TypeField>
   </TypeFields>
   <PortfolioBacklogs>
-    <PortfolioBacklog category="Microsoft.FeatureCategory" pluralName="Features" singularName="Feature">
+	<PortfolioBacklog category="SAFe.EpicCategory" pluralName="Epics" singularName="Epic">
+      <States>
+      <State value="New" type="Proposed" />
+      <State value="Active" type="InProgress" />
+      <State value="Resolved" type="InProgress" />
+      <State value="Closed" type="Complete" />
+      </States>
+      <Columns>
+        <Column refname="System.WorkItemType" width="100" />
+        <Column refname="System.Title" width="400" />
+        <Column refname="System.State" width="100" />
+        <Column refname="Microsoft.VSTS.Common.BusinessValue" width="50" />
+        <Column refname="System.Tags" width="200" />
+      </Columns>
+      <AddPanel>
+        <Fields>
+          <Field refname="System.Title" />
+        </Fields>
+      </AddPanel>
+    </PortfolioBacklog>
+    <PortfolioBacklog category="Microsoft.FeatureCategory" parent="SAFe.EpicCategory" pluralName="Features" singularName="Feature">
       <States>
       <State value="New" type="Proposed" />
       <State value="Active" type="InProgress" />
@@ -102,6 +122,7 @@
   </Weekends>
   <WorkItemColors>
     <WorkItemColor primary="FF009CCC" secondary="FFD6ECF2" name="User Story" />
+	<WorkItemColor primary="FF009900" secondary="FF005C00" name="Epic" />
     <WorkItemColor primary="FF773B93" secondary="FFEEE2F2" name="Feature" />
     <WorkItemColor primary="FFF2CB1D" secondary="FFF6F5D2" name="Task" />
     <WorkItemColor primary="FFCC293D" secondary="FFFAEAE5" name="Bug" />
