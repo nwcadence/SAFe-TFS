@@ -32,6 +32,7 @@
         <WORKITEMTYPE fileName="WorkItem Tracking\TypeDefinitions\Issue.xml" />
         <WORKITEMTYPE fileName="WorkItem Tracking\TypeDefinitions\SharedParameter.xml" />
 		<WORKITEMTYPE fileName="WorkItem Tracking\TypeDefinitions\Spike.xml" />
+		<WORKITEMTYPE fileName="WorkItem Tracking\TypeDefinitions\Refactor.xml" />
       </WORKITEMTYPES>
     </taskXml>
   </task>

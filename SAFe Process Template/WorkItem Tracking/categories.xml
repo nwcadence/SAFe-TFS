@@ -17,6 +17,7 @@
     <DEFAULTWORKITEMTYPE name="User Story" />
 	<WORKITEMTYPE name="Bug" />
 	<WORKITEMTYPE name="Spike" />
+	<WORKITEMTYPE name="Refactor" />
   </CATEGORY>
   <CATEGORY name="Test Case Category" refname="Microsoft.TestCaseCategory">
     <DEFAULTWORKITEMTYPE name="Test Case" />
