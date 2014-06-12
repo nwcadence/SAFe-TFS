@@ -420,7 +420,7 @@
                       <Filter LinkType="System.LinkTypes.Hierarchy" />
                     </WorkItemLinkFilters>
                     <WorkItemTypeFilters FilterType="include">
-                      <Filter WorkItemType="Feature" />
+                      <Filter WorkItemType="Epic" />
                     </WorkItemTypeFilters>
                     <ExternalLinkFilters FilterType="excludeAll" />
                     <LinkColumns>
