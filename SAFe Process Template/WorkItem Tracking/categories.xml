@@ -8,7 +8,8 @@
     <DEFAULTWORKITEMTYPE name="Investment Theme" />
   </CATEGORY>
   <CATEGORY name="EpicCategory" refname="SAFe.EpicCategory">
-    <DEFAULTWORKITEMTYPE name="Epic" />
+    <DEFAULTWORKITEMTYPE name="Business Epic" />
+	<WORKITEMTYPE name="Architectural Epic" />
   </CATEGORY>
   <CATEGORY name="Feature Category" refname="Microsoft.FeatureCategory">
     <DEFAULTWORKITEMTYPE name="Feature" />
