@@ -16,6 +16,7 @@
   <CATEGORY name="Requirement Category" refname="Microsoft.RequirementCategory">
     <DEFAULTWORKITEMTYPE name="User Story" />
 	<WORKITEMTYPE name="Bug" />
+	<WORKITEMTYPE name="Spike" />
   </CATEGORY>
   <CATEGORY name="Test Case Category" refname="Microsoft.TestCaseCategory">
     <DEFAULTWORKITEMTYPE name="Test Case" />

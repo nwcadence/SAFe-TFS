@@ -39,10 +39,10 @@
     </PortfolioBacklog>
 	<PortfolioBacklog category="SAFe.EpicCategory" parent="SAFe.InvestmentThemeCategory" pluralName="Epics" singularName="Epic">
       <States>
-      <State value="New" type="Proposed" />
-      <State value="Active" type="InProgress" />
-      <State value="Resolved" type="InProgress" />
-      <State value="Closed" type="Complete" />
+        <State value="New" type="Proposed" />
+        <State value="Active" type="InProgress" />
+        <State value="Resolved" type="InProgress" />
+        <State value="Closed" type="Complete" />
       </States>
       <Columns>
         <Column refname="System.WorkItemType" width="100" />
