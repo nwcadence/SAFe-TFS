@@ -78,7 +78,7 @@
       </AddPanel>
     </PortfolioBacklog>
   </PortfolioBacklogs>
-  <RequirementBacklog category="Microsoft.RequirementCategory" pluralName="Stories" singularName="User Story">
+  <RequirementBacklog category="Microsoft.RequirementCategory" pluralName="Stories" singularName="Story">
     <States>
       <State value="New" type="Proposed" />
       <State value="Active" type="InProgress" />
