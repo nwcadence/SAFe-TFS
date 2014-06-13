@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <witd:WITD application="Work item type editor" version="1.0" xmlns:witd="http://schemas.microsoft.com/VisualStudio/2008/workitemtracking/typedef">
-  <WORKITEMTYPE name="Feature">
+  <WORKITEMTYPE name="Architectural Feature">
     <DESCRIPTION>Tracks a feature that will be released with the product</DESCRIPTION>
     <FIELDS>
       <FIELD name="Id" refname="System.Id" type="Integer" reportable="dimension" />

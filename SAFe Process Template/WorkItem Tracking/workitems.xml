@@ -21,7 +21,8 @@
         <WORKITEMTYPE fileName="WorkItem Tracking\TypeDefinitions\CodeReviewResponse.xml" />
 		<WORKITEMTYPE fileName="WorkItem Tracking\TypeDefinitions\BusinessEpic.xml" />
 		<WORKITEMTYPE fileName="WorkItem Tracking\TypeDefinitions\ArchitecturalEpic.xml" />
-        <WORKITEMTYPE fileName="WorkItem Tracking\TypeDefinitions\Feature.xml" />
+        <WORKITEMTYPE fileName="WorkItem Tracking\TypeDefinitions\ArchitecturalFeature.xml" />
+		<WORKITEMTYPE fileName="WorkItem Tracking\TypeDefinitions\BusinessFeature.xml" />
         <WORKITEMTYPE fileName="WorkItem Tracking\TypeDefinitions\FeedbackRequest.xml" />
         <WORKITEMTYPE fileName="WorkItem Tracking\TypeDefinitions\FeedbackResponse.xml" />
         <WORKITEMTYPE fileName="WorkItem Tracking\TypeDefinitions\SharedStep.xml" />

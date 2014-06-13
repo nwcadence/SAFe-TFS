@@ -12,7 +12,8 @@
 	<WORKITEMTYPE name="Architectural Epic" />
   </CATEGORY>
   <CATEGORY name="Feature Category" refname="Microsoft.FeatureCategory">
-    <DEFAULTWORKITEMTYPE name="Feature" />
+    <DEFAULTWORKITEMTYPE name="Business Feature" />
+	<WORKITEMTYPE name="Architectural Feature" />
   </CATEGORY>
   <CATEGORY name="Requirement Category" refname="Microsoft.RequirementCategory">
     <DEFAULTWORKITEMTYPE name="User Story" />
