@@ -141,19 +141,19 @@
     <DayOfWeek>Sunday</DayOfWeek>
   </Weekends>
   <WorkItemColors>
-    <WorkItemColor primary="FF009CCC" secondary="FFD6ECF2" name="User Story" />
-	<WorkItemColor primary="FF009900" secondary="FF005C00" name="Business Epic" />
-	<WorkItemColor primary="FF005C00" secondary="FF009900" name="Architectural Epic" />
-	<WorkItemColor primary="FF434319" secondary="FF8E8E75" name="Investment Theme" />
-    <WorkItemColor primary="FF773B93" secondary="FFEEE2F2" name="Business Feature" />
-	<WorkItemColor primary="FF773B93" secondary="FFEEE2F2" name="Architectural Feature" />
-    <WorkItemColor primary="FFF2CB1D" secondary="FFF6F5D2" name="Task" />
-    <WorkItemColor primary="FFCC293D" secondary="FFFAEAE5" name="Bug" />
+    <WorkItemColor primary="FF00A287" secondary="FFD6ECF2" name="User Story" />
+	<WorkItemColor primary="FF062270" secondary="FF005C00" name="Business Epic" />
+	<WorkItemColor primary="FF007F16" secondary="FF009900" name="Architectural Epic" />
+	<WorkItemColor primary="FF4C036E" secondary="FF8E8E75" name="Investment Theme" />
+    <WorkItemColor primary="FF133CAC" secondary="FFEEE2F2" name="Business Feature" />
+	<WorkItemColor primary="FF00C322" secondary="FFEEE2F2" name="Architectural Feature" />
+    <WorkItemColor primary="FF5Ed0BD" secondary="FFF6F5D2" name="Task" />
+    <WorkItemColor primary="FFFF0000" secondary="FFFAEAE5" name="Bug" />
     <WorkItemColor primary="FFFF9D00" secondary="FFFCEECF" name="Code Review Request" />
     <WorkItemColor primary="FFFF9D00" secondary="FFFCEECF" name="Code Review Response" />
     <WorkItemColor primary="FFFF9D00" secondary="FFFCEECF" name="Feedback Request" />
     <WorkItemColor primary="FFFF9D00" secondary="FFFCEECF" name="Feedback Response" />
-    <WorkItemColor primary="FFFF9D00" secondary="FFFCEECF" name="Issue" />
+    <WorkItemColor primary="FFA60000" secondary="FFFCEECF" name="Issue" />
     <WorkItemColor primary="FFFF9D00" secondary="FFFCEECF" name="Shared Steps" />
     <WorkItemColor primary="FFFF9D00" secondary="FFFCEECF" name="Test Case" />
   </WorkItemColors>
