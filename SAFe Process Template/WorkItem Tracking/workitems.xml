@@ -50,6 +50,7 @@
         <Permission allow="Read" identity="[$$PROJECTNAME$$]\Contributors" />
         <Permission allow="Read" identity="[$$PROJECTNAME$$]\Build Administrators" />
         <QueryFolder name="Current Iteration">
+		<!-- TODO: ALIGN WITH NEW ITERATION PATHS
           <Query name="Active Bugs" fileName="WorkItem Tracking\Queries\ActiveBugs.wiq" />
           <Query name="Active Tasks" fileName="WorkItem Tracking\Queries\ActiveTasks.wiq" />
           <Query name="Bug Triage" fileName="WorkItem Tracking\Queries\BugTriage.wiq" />
@@ -60,7 +61,8 @@
           <Query name="Resolved Bugs" fileName="WorkItem Tracking\Queries\ResolvedBugs.wiq" />
           <Query name="User Stories Delivered" fileName="WorkItem Tracking\Queries\UserStoriesDelivered.wiq" />
           <Query name="User Stories without Test Cases" fileName="WorkItem Tracking\Queries\UserStoriesWithoutTestCases.wiq" />
-        </QueryFolder>
+        -->
+		</QueryFolder>
         <QueryFolder name="Troubleshooting">
           <Query name="Work Items With Summary Values" fileName="WorkItem Tracking\Queries\WorkItemsWithSummaryValues.wiq" />
         </QueryFolder>
