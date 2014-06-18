@@ -21,7 +21,26 @@
             </Node>
           </Children>
         </Node>
-        <Node StructureType="ProjectModelHierarchy" Name="Area" xmlns="" />
+        <Node StructureType="ProjectModelHierarchy" Name="Area" xmlns="" >
+		  <Children>
+			<Node StructureType="ProjectModelHierarchy" Name="Portfolio A" >
+			<Children>
+			  <Node StructureType="ProjectModelHierarchy" Name="Program A-A">
+				<Children>
+				  <Node StructureType="ProjectModelHierarchy" Name="Delivery Team A-A-A" />
+				  <Node StructureType="ProjectModelHierarchy" Name="Delivery Team A-A-B" />
+				</Children>
+			  </Node>
+			  <Node StructureType="ProjectModelHierarchy" Name="Program A-B">
+				<Children>
+				  <Node StructureType="ProjectModelHierarchy" Name="Delivery Team A-B-A" />
+				  <Node StructureType="ProjectModelHierarchy" Name="Delivery Team A-B-B" />
+				</Children>
+			  </Node>
+			</Children>
+			</Node>
+		  </Children>
+		</Node>
       </Nodes>
       <properties>
         <property name="MSPROJ" value="Classification\FileMapping.xml" isFile="true" />

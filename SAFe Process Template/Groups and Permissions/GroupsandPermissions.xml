@@ -3,6 +3,80 @@
   <task id="GroupCreation1" name="Create Groups and Permissions" plugin="Microsoft.ProjectCreationWizard.Groups" completionMessage="Groups and Permissions created.">
     <taskXml>
       <groups>
+		<group name="Portfolio Team A" isTeam="true" description="Portfolio level team for managing epics and investment themes.">
+		  <permissions>
+		    <permission name="GENERIC_READ" class="PROJECT" allow="true" />
+		  </permissions>
+		  <members>
+		    <member name="@creator"/>
+		  </members>
+		  <teamSettings areaPath="Area\Portfolio A">
+		    <iterationPaths backlogPath="Iteration">
+			  <iterationPath path="Release 1" />
+			  <iterationPath path="Release 2" />
+			</iterationPaths>
+		  </teamSettings>
+		</group>
+		<group name="Program Team A-A" isTeam="true" description="Program level team for managing features and epics.">
+		  <permissions>
+		    <permission name="GENERIC_READ" class="PROJECT" allow="true" />
+		  </permissions>
+		  <members>
+		    <member name="@creator"/>
+		  </members>
+		  <teamSettings areaPath="Area\Portfolio A\Program A-A">
+		    <iterationPaths backlogPath="Iteration">
+			  <iterationPath path="Release 1\Iteration 1" />
+			  <iterationPath path="Release 1\Iteration 2" />
+			  <iterationPath path="Release 1\Iteration 3" />
+			</iterationPaths>
+		  </teamSettings>
+		</group>
+		<group name="Program Team A-B" isTeam="true" description="Program level team for managing features and epics.">
+		  <permissions>
+		    <permission name="GENERIC_READ" class="PROJECT" allow="true" />
+		  </permissions>
+		  <members>
+		    <member name="@creator"/>
+		  </members>
+		  <teamSettings areaPath="Area\Portfolio A\Program A-B">
+		    <iterationPaths backlogPath="Iteration">
+			  <iterationPath path="Release 1\Iteration 1" />
+			  <iterationPath path="Release 1\Iteration 2" />
+			  <iterationPath path="Release 1\Iteration 3" />
+			</iterationPaths>
+		  </teamSettings>
+		</group>
+		<group name="Delivery Team A-A-A" isTeam="true" description="Delivery team responsible for delivering stories and features.">
+		  <permissions>
+		    <permission name="GENERIC_READ" class="PROJECT" allow="true" />
+		  </permissions>
+		  <members>
+		    <member name="@creator"/>
+		  </members>
+		  <teamSettings areaPath="Area\Portfolio A\Program A-A\Delivery Team A-A-A">
+		    <iterationPaths backlogPath="Iteration">
+			  <iterationPath path="Release 1\Iteration 1" />
+			  <iterationPath path="Release 1\Iteration 2" />
+			  <iterationPath path="Release 1\Iteration 3" />
+			</iterationPaths>
+		  </teamSettings>
+		</group>
+		<group name="Delivery Team A-A-B" isTeam="true" description="Delivery team responsible for delivering stories and features.">
+		  <permissions>
+		    <permission name="GENERIC_READ" class="PROJECT" allow="true" />
+		  </permissions>
+		  <members>
+		    <member name="@creator"/>
+		  </members>
+		  <teamSettings areaPath="Area\Portfolio A\Program A-A\Delivery Team A-A-B">
+		    <iterationPaths backlogPath="Iteration">
+			  <iterationPath path="Release 1\Iteration 1" />
+			  <iterationPath path="Release 1\Iteration 2" />
+			  <iterationPath path="Release 1\Iteration 3" />
+			</iterationPaths>
+		  </teamSettings>
+		</group>
         <group name="@defaultTeam">
           <permissions>
             <permission name="GENERIC_READ" class="PROJECT" allow="true" />
@@ -10,13 +84,11 @@
           <members>
             <member name="@creator"/>
           </members>
-          <teamSettings areaPath="Area">
-            <iterationPaths backlogPath="Iteration">
-              <iterationPath path="Release 1\Iteration 1" />
-              <iterationPath path="Release 1\Iteration 2" />
-              <iterationPath path="Release 1\Iteration 3" />
-            </iterationPaths>
-          </teamSettings>
+		  <teamSettings areaPath="Area">
+		    <iterationPaths backlogPath="Iteration">
+			  <iterationPath path="Release 1" />
+			</iterationPaths>
+		  </teamSettings>
         </group>
         <group name="Readers" description="Members of this group have access to the team project.">
           <permissions>

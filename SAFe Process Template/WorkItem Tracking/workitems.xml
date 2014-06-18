@@ -50,27 +50,14 @@
         <Permission allow="Read" identity="[$$PROJECTNAME$$]\Contributors" />
         <Permission allow="Read" identity="[$$PROJECTNAME$$]\Build Administrators" />
         <QueryFolder name="Current Iteration">
-		<!-- TODO: ALIGN WITH NEW ITERATION PATHS
           <Query name="Active Bugs" fileName="WorkItem Tracking\Queries\ActiveBugs.wiq" />
-          <Query name="Active Tasks" fileName="WorkItem Tracking\Queries\ActiveTasks.wiq" />
-          <Query name="Bug Triage" fileName="WorkItem Tracking\Queries\BugTriage.wiq" />
-          <Query name="Completed Tasks" fileName="WorkItem Tracking\Queries\CompletedTasks.wiq" />
           <Query name="Open Issues" fileName="WorkItem Tracking\Queries\OpenIssues.wiq" />
-          <Query name="Open Test Cases" fileName="WorkItem Tracking\Queries\OpenTestCases.wiq" />
-          <Query name="Open User Stories" fileName="WorkItem Tracking\Queries\OpenUserStories.wiq" />
           <Query name="Resolved Bugs" fileName="WorkItem Tracking\Queries\ResolvedBugs.wiq" />
-          <Query name="User Stories Delivered" fileName="WorkItem Tracking\Queries\UserStoriesDelivered.wiq" />
-          <Query name="User Stories without Test Cases" fileName="WorkItem Tracking\Queries\UserStoriesWithoutTestCases.wiq" />
-        -->
 		</QueryFolder>
-        <QueryFolder name="Troubleshooting">
-          <Query name="Work Items With Summary Values" fileName="WorkItem Tracking\Queries\WorkItemsWithSummaryValues.wiq" />
-        </QueryFolder>
         <Query name="My Bugs" fileName="WorkItem Tracking\Queries\MyBugs.wiq" />
         <Query name="My Tasks" fileName="WorkItem Tracking\Queries\MyTasks.wiq" />
         <Query name="Feedback" fileName="WorkItem Tracking\Queries\Feedback.wiq" />
         <Query name="My Test Cases" fileName="WorkItem Tracking\Queries\MyTestCases.wiq" />
-        <Query name="Product Planning" fileName="WorkItem Tracking\Queries\ProductPlanning.wiq" />
       </QUERIES>
     </taskXml>
   </task>

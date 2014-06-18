@@ -10,7 +10,7 @@
      WHERE [System.TeamProject] = @project
        AND [System.WorkItemType] = 'Issue'
        AND [System.State] &lt;&gt; 'Closed'
-       AND [System.IterationPath] UNDER '$$PROJECTNAME$$\Iteration 1'
+       AND [System.IterationPath] UNDER '$$PROJECTNAME$$\Release 1\Iteration 1'
   ORDER BY [Microsoft.VSTS.Common.StackRank],
            [Microsoft.VSTS.Common.Priority],
            [System.Id]
