@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <witd:WITD application="Work item type editor" version="1.0" xmlns:witd="http://schemas.microsoft.com/VisualStudio/2008/workitemtracking/typedef">
   <WORKITEMTYPE name="Investment Theme">
-    <DESCRIPTION>Investment Themes are enterprise initiatives that are sufficiently substantial in scope so as to warrant analysis and understanding of potential ROI.</DESCRIPTION>
+    <DESCRIPTION>Investment Themes are enterprise initiatives that are sufficiently substantial in scope so as to warrant analysis and understanding of potential ROI. There is typically a 1-1 relationship between Investment Themes and Agile Release Trains.</DESCRIPTION>
     <FIELDS>
       <FIELD name="Id" refname="System.Id" type="Integer" reportable="dimension" />
       <FIELD name="Title" refname="System.Title" type="String" reportable="dimension">
         <REQUIRED />
-        <HELPTEXT>What the user will be able to do when this is implemented</HELPTEXT>
+        <HELPTEXT>The title of the Investment Theme</HELPTEXT>
       </FIELD>
       <FIELD name="Description" refname="System.Description" type="HTML">
-        <HELPTEXT>Description or acceptance criteria for this Investment Theme to be considered complete</HELPTEXT>
+        <HELPTEXT>Description of the Investment Theme</HELPTEXT>
       </FIELD>
       <FIELD name="Assigned To" refname="System.AssignedTo" type="String" reportable="dimension" syncnamechanges="true">
         <ALLOWEXISTINGVALUE />
