@@ -20,15 +20,13 @@
 	<PortfolioBacklog category="SAFe.InvestmentThemeCategory" pluralName="Investment Themes" singularName="Investment Theme">
       <States>
       <State value="New" type="Proposed" />
-      <State value="Active" type="InProgress" />
-      <State value="Resolved" type="InProgress" />
-      <State value="Closed" type="Complete" />
+	  <State value="Funded" type="InProgress" />
+      <State value="Unfunded" type="Complete" />
       </States>
       <Columns>
         <Column refname="System.WorkItemType" width="100" />
         <Column refname="System.Title" width="400" />
         <Column refname="System.State" width="100" />
-        <Column refname="Microsoft.VSTS.Common.BusinessValue" width="50" />
         <Column refname="System.Tags" width="200" />
       </Columns>
       <AddPanel>
