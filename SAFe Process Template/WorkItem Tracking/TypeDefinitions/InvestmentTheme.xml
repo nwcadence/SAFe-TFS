@@ -78,7 +78,14 @@
         </SUGGESTEDVALUES>
         <HELPTEXT>The build in which the Investment Theme was fixed</HELPTEXT>
       </FIELD>
-    </FIELDS>
+	  <!-- ******* SAFe fields ----->
+	  <FIELD name="Target budget portion" refname="SAFe.TargetBudgetPortion" type="Double" reportable="dimension">
+	    <HELPTEXT>The percentage of the total budget to be allocated to this investment theme.</HELPTEXT>
+	  </FIELD>
+	  <FIELD name="Business Drivers" refname="SAFe.BusinessDrivers" type="HTML">
+	    <HELPTEXT>The business drivers behind the motivation to invest in this area</HELPTEXT>
+      </FIELD>
+	</FIELDS>
     <WORKFLOW>
       <STATES>
 	    <STATE value ="New">
