@@ -2,8 +2,8 @@
 <ProcessTemplate>
   <metadata>
     <name>SAFe Process Template</name>
-    <description>v1.0.1: This template is designed to enable teams using the Scaled Agile Framework (SAFe). For more information on SAFe check out http://scaledagileframework.com. This template was customized from an MSF for Agile 2013.2 base.</description>
-    <version type="914ADC51-1338-4F06-8E25-B4542DE4215B" major="1" minor="0" />
+    <description>v1.1.0: This template is designed to enable teams using the Scaled Agile Framework (SAFe). For more information on SAFe check out http://scaledagileframework.com. This template was customized from an MSF for Agile 2013.2 base. For more information on this template see https://github.com/nwcadence/SAFe-TFS.</description>
+    <version type="914ADC51-1338-4F06-8E25-B4542DE4215B" major="1" minor="1" />
     <plugins>
       <plugin name="Microsoft.ProjectCreationWizard.Classification" wizardPage="false" />
       <plugin name="Microsoft.ProjectCreationWizard.Reporting" wizardPage="false" />

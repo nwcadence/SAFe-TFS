@@ -78,13 +78,28 @@
         </SUGGESTEDVALUES>
         <HELPTEXT>The build in which the Investment Theme was fixed</HELPTEXT>
       </FIELD>
-	  <!-- ******* SAFe fields ----->
+	  <!-- ******* SAFe fields -->
 	  <FIELD name="Target budget portion" refname="SAFe.TargetBudgetPortion" type="Double" reportable="dimension">
 	    <HELPTEXT>The percentage of the total budget to be allocated to this investment theme.</HELPTEXT>
 	  </FIELD>
 	  <FIELD name="Business Drivers" refname="SAFe.BusinessDrivers" type="HTML">
 	    <HELPTEXT>The business drivers behind the motivation to invest in this area</HELPTEXT>
       </FIELD>
+	  <FIELD name="Financial Goals" refname="SAFe.FinancialGoals" type="HTML">
+	    <HELPTEXT>The financial goals we need to meet to be successful in this area</HELPTEXT>
+      </FIELD>
+	  <FIELD name="Business Value" refname="SAFe.BusinessValue" type="Double" reportable="dimension">
+	    <HELPTEXT>Relative business value</HELPTEXT>
+	  </FIELD>
+	  <FIELD name="Time Sensitivity" refname="SAFe.TimeSensitivity" type="Double" reportable="dimension">
+	    <HELPTEXT>Relative sensitivity to implementation time</HELPTEXT>
+	  </FIELD>
+	  <FIELD name="Risk Reduction Opportunity Enablement" refname="SAFe.RROE" type="Double" reportable="dimension">
+	    <HELPTEXT>Relative risk reduction and/or opportunity enablement generated</HELPTEXT>
+	  </FIELD>
+	  <FIELD name="Remaining Job Size" refname="SAFe.JobSize" type="Double" reportable="dimension">
+	    <HELPTEXT>Relative remaining job size (MUST IGNORE SUNK COSTS)</HELPTEXT>
+	  </FIELD>
 	</FIELDS>
     <WORKFLOW>
       <STATES>
@@ -165,9 +180,15 @@
         <Group>
           <Column PercentWidth="70">
             <TabGroup>
-              <Tab Label="Details">
+              <Tab Label="Description">
                 <Control FieldName="System.Description" Type="HtmlFieldControl" Dock="Fill" />
               </Tab>
+			  <Tab Label="Business Drivers">
+			    <Control FieldName="SAFe.BusinessDrivers" Type="HtmlFieldControl" Dock="Fill" />
+			  </Tab>
+			  <Tab Label="Financial Goals">
+			    <Control FieldName="SAFe.FinancialGoals" Type="HtmlFieldControl" Dock="Fill" />
+			  </Tab>
               <Tab Label="Implementation">
                 <Control Type="LinksControl" Name="Hierarchy">
                   <LinksControlOptions>
@@ -224,6 +245,15 @@
                 </Group>
                 <Group Label="Planning">
                   <Column PercentWidth="100">
+				    <Control FieldName="SAFe.TargetBudgetPortion" Type="FieldControl" Label="Target Budget %" LabelPosition="Left" />
+                  </Column>
+				</Group>
+				<Group Label="WSJF values">
+				  <Column PercentWidth="100">
+				    <Control FieldName="SAFe.BusinessValue" Type="FieldControl" Label="Business Value" LabelPosition="Left" />
+					<Control FieldName="SAFe.TimeSensitivity" Type="FieldControl" Label="Time Sensitivity" LabelPosition="Left" />
+					<Control FieldName="SAFe.RROE" Type="FieldControl" Label="Risk Reduction | Opportunity Enablement" LabelPosition="Left" />
+					<Control FieldName="SAFe.JobSize" Type="FieldControl" Label="Remaining Job Size" LabelPosition="Left" />
                   </Column>
                 </Group>
                 <Group Label="Classification">
