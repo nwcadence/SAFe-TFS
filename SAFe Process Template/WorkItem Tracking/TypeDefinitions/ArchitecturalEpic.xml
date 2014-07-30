@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<witd:WITD application="Work item type editor" version="1.0" xmlns:witd="http://schemas.microsoft.com/VisualStudio/2008/workitemtracking/typedef">
+<Witd:WITD application="Work item type editor" version="1.0" xmlns:Witd="http://schemas.microsoft.com/VisualStudio/2008/workitemtracking/typedef">
   <WORKITEMTYPE name="Architectural Epic">
     <DESCRIPTION>Epics are enterprise initiatives that are sufficiently substantial in scope so as to warrant analysis and understanding of potential ROI.</DESCRIPTION>
     <FIELDS>
@@ -82,7 +82,7 @@
       </FIELD>
       <FIELD name="Priority" refname="Microsoft.VSTS.Common.Priority" type="Integer" reportable="dimension">
         <REQUIRED />
-        <ALLOWEDVALUES>
+        <ALLOWEDVALUES expanditems="true">
           <LISTITEM value="1" />
           <LISTITEM value="2" />
           <LISTITEM value="3" />
@@ -92,7 +92,7 @@
         <HELPTEXT>Priority for completing the epic, based on business goals</HELPTEXT>
       </FIELD>
       <FIELD name="Risk" refname="Microsoft.VSTS.Common.Risk" type="String" reportable="dimension">
-        <ALLOWEDVALUES>
+        <ALLOWEDVALUES expanditems="true">
           <LISTITEM value="1 - High" />
           <LISTITEM value="2 - Medium" />
           <LISTITEM value="3 - Low" />
@@ -105,15 +105,34 @@
       <FIELD name="Target Date" refname="Microsoft.VSTS.Scheduling.TargetDate" type="DateTime" reportable="dimension">
         <HELPTEXT>The target date for completing the epic</HELPTEXT>
       </FIELD>
-      <FIELD name="Business Value" refname="Microsoft.VSTS.Common.BusinessValue" type="Integer" reportable="measure" formula="sum" >
+      <FIELD name="Business Value" refname="Microsoft.VSTS.Common.BusinessValue" type="Integer" reportable="measure">
         <HELPTEXT>The business value for the customer when the epic is released</HELPTEXT>
+      </FIELD>
+      <!-- **************** Custom Fields ***************** -->
+      <FIELD name="Time Sensitivity" refname="SAFe.TimeSensitivity" type="Double" reportable="dimension">
+        <HELPTEXT>Relative sensitivity to implementation time</HELPTEXT>
+      </FIELD>
+      <FIELD name="Risk Reduction Opportunity Enablement" refname="SAFe.RROE" type="Integer" reportable="dimension">
+        <HELPTEXT>Relative risk reduction and/or opportunity enablement generated</HELPTEXT>
+      </FIELD>
+      <FIELD name="Remaining Job Size" refname="SAFe.JobSize" type="Integer" reportable="dimension">
+        <HELPTEXT>Relative remaining job size (MUST IGNORE SUNK COSTS)</HELPTEXT>
       </FIELD>
       <!-- **************** Team Build Integration Fields **************  -->
       <FIELD name="Integration Build" refname="Microsoft.VSTS.Build.IntegrationBuild" type="String" reportable="dimension">
-        <SUGGESTEDVALUES>
+        <SUGGESTEDVALUES expanditems="true">
           <LISTITEM value="&lt;None&gt;" />
         </SUGGESTEDVALUES>
         <HELPTEXT>The build in which the epic was fixed</HELPTEXT>
+      </FIELD>
+      <FIELD name="Incremental Implementation" refname="SAFe.IncrementalImplementation" type="String" reportable="dimension">
+        <ALLOWEDVALUES expanditems="true">
+          <LISTITEM value="Yes" />
+          <LISTITEM value="No" />
+          <LISTITEM value="Partial" />
+        </ALLOWEDVALUES>
+        <DEFAULT from="value" value="Yes" />
+        <HELPTEXT>Whether this can be implemented incrementally</HELPTEXT>
       </FIELD>
     </FIELDS>
     <WORKFLOW>
@@ -230,8 +249,8 @@
         </TRANSITION>
         <TRANSITION from="Active" to="New">
           <REASONS>
-            <DEFAULTREASON value="Moved to the backlog" />
             <REASON value="Implementation halted" />
+            <DEFAULTREASON value="Moved to the backlog" />
           </REASONS>
         </TRANSITION>
         <TRANSITION from="Active" to="Resolved">
@@ -299,10 +318,10 @@
         </TRANSITION>
         <TRANSITION from="Active" to="Closed">
           <REASONS>
-            <DEFAULTREASON value="Acceptance tests pass" />
             <REASON value="Abandoned" />
             <REASON value="Out of scope" />
             <REASON value="Rejected" />
+            <DEFAULTREASON value="Acceptance tests pass" />
           </REASONS>
           <FIELDS>
             <FIELD refname="Microsoft.VSTS.Common.ActivatedDate">
@@ -329,8 +348,8 @@
         </TRANSITION>
         <TRANSITION from="Closed" to="Active">
           <REASONS>
-            <DEFAULTREASON value="Reintroduced in Scope" />
             <REASON value="Closed in error" />
+            <DEFAULTREASON value="Reintroduced in Scope" />
           </REASONS>
           <FIELDS>
             <FIELD refname="Microsoft.VSTS.Common.ActivatedBy">
@@ -404,23 +423,23 @@
       <Layout HideReadOnlyEmptyFields="true" HideControlBorders="true">
         <Group Margin="(0,0,0,5)">
           <Column PercentWidth="100">
-            <Control FieldName="System.Title" Type="FieldControl" ControlFontSize="large" EmptyText="&lt;Enter title here&gt;" />
+            <Control FieldName="System.Title" Type="FieldControl" ControlFontSize="large" EmptyText="&lt;Enter title here&gt;" LabelPosition="Top" />
           </Column>
         </Group>
         <Group>
           <Column PercentWidth="70">
             <TabGroup>
               <Tab Label="Details">
-                <Control FieldName="System.Description" Type="HtmlFieldControl" Dock="Fill" />
+                <Control FieldName="System.Description" Type="HtmlFieldControl" Dock="Fill" LabelPosition="Top" />
               </Tab>
               <Tab Label="Implementation">
-                <Control Type="LinksControl" Name="Hierarchy">
+                <Control Type="LinksControl" Name="Hierarchy" LabelPosition="Top">
                   <LinksControlOptions>
                     <WorkItemLinkFilters FilterType="include">
                       <Filter LinkType="System.LinkTypes.Hierarchy" />
                     </WorkItemLinkFilters>
                     <WorkItemTypeFilters FilterType="include">
-					  <Filter WorkItemType="Architectural Feature" />
+                      <Filter WorkItemType="Architectural Feature" />
                     </WorkItemTypeFilters>
                     <ExternalLinkFilters FilterType="excludeAll" />
                     <LinkColumns>
@@ -454,7 +473,7 @@
                 <Control Type="AttachmentsControl" LabelPosition="Top" />
               </Tab>
               <Tab Label="History">
-                <Control FieldName="System.History" Type="WorkItemLogControl" Dock="Fill" />
+                <Control FieldName="System.History" Type="WorkItemLogControl" Dock="Fill" LabelPosition="Top" />
               </Tab>
             </TabGroup>
           </Column>
@@ -472,8 +491,16 @@
                   <Column PercentWidth="100">
                     <Control FieldName="Microsoft.VSTS.Common.Priority" Type="FieldControl" Label="Priority" LabelPosition="Left" />
                     <Control FieldName="Microsoft.VSTS.Common.Risk" Type="FieldControl" Label="Risk" LabelPosition="Left" />
-                    <Control FieldName="Microsoft.VSTS.Common.BusinessValue" Type="FieldControl" Label="Business Value" LabelPosition="Left" />
                     <Control FieldName="Microsoft.VSTS.Scheduling.TargetDate" Type="DateTimeControl" Label="Target Date" LabelPosition="Left" />
+                    <Control FieldName="SAFe.IncrementalImplementation" Type="FieldControl" Label="Incremental Implementation?" LabelPosition="Left" />
+                  </Column>
+                </Group>
+                <Group Label="WSJF values">
+                  <Column PercentWidth="100">
+                    <Control FieldName="Microsoft.VSTS.Common.BusinessValue" Type="FieldControl" Label="Business Value" LabelPosition="Left" />
+                    <Control FieldName="SAFe.TimeSensitivity" Type="FieldControl" Label="Time Sensitivity" LabelPosition="Left" />
+                    <Control FieldName="SAFe.RROE" Type="FieldControl" Label="Risk Reduction | Opportunity Enablement" LabelPosition="Left" />
+                    <Control FieldName="SAFe.JobSize" Type="FieldControl" Label="Remaining Job Size" LabelPosition="Left" />
                   </Column>
                 </Group>
                 <Group Label="Classification">
@@ -489,4 +516,4 @@
       </Layout>
     </FORM>
   </WORKITEMTYPE>
-</witd:WITD>
+</Witd:WITD>
