@@ -17,7 +17,7 @@
     </TypeField>
   </TypeFields>
   <PortfolioBacklogs>
-	<PortfolioBacklog category="SAFe.InvestmentThemeCategory" pluralName="Investment Themes" singularName="Investment Theme">
+	<PortfolioBacklog category="SAFe.StrategicThemeCategory" pluralName="Strategic Themes" singularName="Strategic Theme">
       <States>
       <State value="New" type="Proposed" />
 	  <State value="Funded" type="InProgress" />
@@ -35,7 +35,7 @@
         </Fields>
       </AddPanel>
     </PortfolioBacklog>
-	<PortfolioBacklog category="SAFe.EpicCategory" parent="SAFe.InvestmentThemeCategory" pluralName="Epics" singularName="Epic">
+	<PortfolioBacklog category="SAFe.EpicCategory" parent="SAFe.StrategicThemeCategory" pluralName="Epics" singularName="Epic">
       <States>
         <State value="New" type="Proposed" />
         <State value="Active" type="InProgress" />
@@ -142,7 +142,7 @@
     <WorkItemColor primary="FF00A287" secondary="FFD6ECF2" name="User Story" />
 	<WorkItemColor primary="FF062270" secondary="FF005C00" name="Business Epic" />
 	<WorkItemColor primary="FF007F16" secondary="FF009900" name="Architectural Epic" />
-	<WorkItemColor primary="FF4C036E" secondary="FF8E8E75" name="Investment Theme" />
+	<WorkItemColor primary="FF4C036E" secondary="FF8E8E75" name="Strategic Theme" />
     <WorkItemColor primary="FF133CAC" secondary="FFEEE2F2" name="Business Feature" />
 	<WorkItemColor primary="FF00C322" secondary="FFEEE2F2" name="Architectural Feature" />
     <WorkItemColor primary="FF5Ed0BD" secondary="FFF6F5D2" name="Task" />

@@ -4,10 +4,10 @@
   <CATEGORY name="Bug Category" refname="Microsoft.BugCategory">
     <DEFAULTWORKITEMTYPE name="Bug" />
   </CATEGORY>
-  <CATEGORY name="Investment Theme Category" refname="SAFe.InvestmentThemeCategory">
-    <DEFAULTWORKITEMTYPE name="Investment Theme" />
+  <CATEGORY name="Strategic Theme Category" refname="SAFe.StrategicThemeCategory">
+    <DEFAULTWORKITEMTYPE name="Strategic Theme" />
   </CATEGORY>
-  <CATEGORY name="EpicCategory" refname="SAFe.EpicCategory">
+  <CATEGORY name="Epic Category" refname="SAFe.EpicCategory">
     <DEFAULTWORKITEMTYPE name="Business Epic" />
 	<WORKITEMTYPE name="Architectural Epic" />
   </CATEGORY>

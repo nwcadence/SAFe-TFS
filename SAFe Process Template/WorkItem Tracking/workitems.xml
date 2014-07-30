@@ -16,7 +16,7 @@
     <taskXml>
       <WORKITEMTYPES>
         <WORKITEMTYPE fileName="WorkItem Tracking\TypeDefinitions\Bug.xml" />
-		<WORKITEMTYPE fileName="WorkItem Tracking\TypeDefinitions\InvestmentTheme.xml" />
+		<WORKITEMTYPE fileName="WorkItem Tracking\TypeDefinitions\StrategicTheme.xml" />
         <WORKITEMTYPE fileName="WorkItem Tracking\TypeDefinitions\CodeReviewRequest.xml" />
         <WORKITEMTYPE fileName="WorkItem Tracking\TypeDefinitions\CodeReviewResponse.xml" />
 		<WORKITEMTYPE fileName="WorkItem Tracking\TypeDefinitions\BusinessEpic.xml" />

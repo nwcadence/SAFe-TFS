@@ -1,26 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <witd:WITD application="Work item type editor" version="1.0" xmlns:witd="http://schemas.microsoft.com/VisualStudio/2008/workitemtracking/typedef">
-  <WORKITEMTYPE name="Investment Theme">
-    <DESCRIPTION>Investment Themes are enterprise initiatives that are sufficiently substantial in scope so as to warrant analysis and understanding of potential ROI. There is typically a 1-1 relationship between Investment Themes and Agile Release Trains.</DESCRIPTION>
+  <WORKITEMTYPE name="Strategic Theme">
+    <DESCRIPTION>Strategic Themes are enterprise initiatives that are sufficiently substantial in scope so as to warrant analysis and understanding of potential ROI. There is typically a 1-1 relationship between Strategic Themes and Agile Release Trains.</DESCRIPTION>
     <FIELDS>
       <FIELD name="Id" refname="System.Id" type="Integer" reportable="dimension" />
       <FIELD name="Title" refname="System.Title" type="String" reportable="dimension">
         <REQUIRED />
-        <HELPTEXT>The title of the Investment Theme</HELPTEXT>
+        <HELPTEXT>The title of the Strategic Theme</HELPTEXT>
       </FIELD>
       <FIELD name="Description" refname="System.Description" type="HTML">
-        <HELPTEXT>Description of the Investment Theme</HELPTEXT>
+        <HELPTEXT>Description of the Strategic Theme</HELPTEXT>
       </FIELD>
       <FIELD name="Assigned To" refname="System.AssignedTo" type="String" reportable="dimension" syncnamechanges="true">
         <ALLOWEXISTINGVALUE />
         <VALIDUSER />
-        <HELPTEXT>The person currently owning the Investment Theme</HELPTEXT>
+        <HELPTEXT>The person currently owning the Strategic Theme</HELPTEXT>
       </FIELD>
       <FIELD name="Area Path" refname="System.AreaPath" type="TreePath" reportable="dimension">
-        <HELPTEXT>The area of the product with which this Investment Theme is associated</HELPTEXT>
+        <HELPTEXT>The area of the product with which this Strategic Theme is associated</HELPTEXT>
       </FIELD>
       <FIELD name="Iteration Path" refname="System.IterationPath" type="TreePath" reportable="dimension">
-        <HELPTEXT>The iteration within which this Investment Theme will be implemented</HELPTEXT>
+        <HELPTEXT>The iteration within which this Strategic Theme will be implemented</HELPTEXT>
       </FIELD>
       <FIELD name="History" refname="System.History" type="History">
         <HELPTEXT>Discussion thread plus automatic record of changes</HELPTEXT>
@@ -29,7 +29,7 @@
         <HELPTEXT>New = New work not yet activated; Active = work remains to be done; Resolved = awaiting acceptance tests; Closed = acceptance tests passed</HELPTEXT>
       </FIELD>
       <FIELD name="Reason" refname="System.Reason" type="String" reportable="dimension">
-        <HELPTEXT>The reason why the Investment Theme is in its current state</HELPTEXT>
+        <HELPTEXT>The reason why the Strategic Theme is in its current state</HELPTEXT>
       </FIELD>
       <FIELD name="Changed Date" refname="System.ChangedDate" type="DateTime" reportable="dimension" />
       <FIELD name="Changed By" refname="System.ChangedBy" type="String" reportable="dimension" syncnamechanges="true">
@@ -76,11 +76,11 @@
         <SUGGESTEDVALUES>
           <LISTITEM value="&lt;None&gt;" />
         </SUGGESTEDVALUES>
-        <HELPTEXT>The build in which the Investment Theme was fixed</HELPTEXT>
+        <HELPTEXT>The build in which the Strategic Theme was fixed</HELPTEXT>
       </FIELD>
 	  <!-- ******* SAFe fields -->
 	  <FIELD name="Target budget portion" refname="SAFe.TargetBudgetPortion" type="Double" reportable="dimension">
-	    <HELPTEXT>The percentage of the total budget to be allocated to this investment theme.</HELPTEXT>
+	    <HELPTEXT>The percentage of the total budget to be allocated to this Strategic theme.</HELPTEXT>
 	  </FIELD>
 	  <FIELD name="Business Drivers" refname="SAFe.BusinessDrivers" type="HTML">
 	    <HELPTEXT>The business drivers behind the motivation to invest in this area</HELPTEXT>
@@ -88,16 +88,16 @@
 	  <FIELD name="Financial Goals" refname="SAFe.FinancialGoals" type="HTML">
 	    <HELPTEXT>The financial goals we need to meet to be successful in this area</HELPTEXT>
       </FIELD>
-	  <FIELD name="Business Value" refname="SAFe.BusinessValue" type="Double" reportable="dimension">
-	    <HELPTEXT>Relative business value</HELPTEXT>
-	  </FIELD>
+	  <FIELD name="Business Value" refname="Microsoft.VSTS.Common.BusinessValue" type="Integer" reportable="measure" formula="sum" >
+        <HELPTEXT>Relative business value</HELPTEXT>
+      </FIELD>
 	  <FIELD name="Time Sensitivity" refname="SAFe.TimeSensitivity" type="Double" reportable="dimension">
 	    <HELPTEXT>Relative sensitivity to implementation time</HELPTEXT>
 	  </FIELD>
-	  <FIELD name="Risk Reduction Opportunity Enablement" refname="SAFe.RROE" type="Double" reportable="dimension">
+	  <FIELD name="Risk Reduction Opportunity Enablement" refname="SAFe.RROE" type="Integer" reportable="dimension">
 	    <HELPTEXT>Relative risk reduction and/or opportunity enablement generated</HELPTEXT>
 	  </FIELD>
-	  <FIELD name="Remaining Job Size" refname="SAFe.JobSize" type="Double" reportable="dimension">
+	  <FIELD name="Remaining Job Size" refname="SAFe.JobSize" type="Integer" reportable="dimension">
 	    <HELPTEXT>Relative remaining job size (MUST IGNORE SUNK COSTS)</HELPTEXT>
 	  </FIELD>
 	</FIELDS>
@@ -136,7 +136,7 @@
       <TRANSITIONS>
         <TRANSITION from="" to="New">
           <REASONS>
-            <DEFAULTREASON value="New area for investment" />
+            <DEFAULTREASON value="New area for Strategic" />
           </REASONS>
         </TRANSITION>
 		<TRANSITION from="New" to="Funded">
@@ -160,12 +160,12 @@
         </TRANSITION>
         <TRANSITION from="Unfunded" to="Funded">
           <REASONS>
-            <DEFAULTREASON value="Further investment in this area needed" />
+            <DEFAULTREASON value="Further Strategic in this area needed" />
           </REASONS>
         </TRANSITION>
         <TRANSITION from="Unfunded" to="Removed">
           <REASONS>
-            <DEFAULTREASON value="No longer tracking investments against this area" />
+            <DEFAULTREASON value="No longer tracking Strategics against this area" />
           </REASONS>
         </TRANSITION>
       </TRANSITIONS>
@@ -250,7 +250,7 @@
 				</Group>
 				<Group Label="WSJF values">
 				  <Column PercentWidth="100">
-				    <Control FieldName="SAFe.BusinessValue" Type="FieldControl" Label="Business Value" LabelPosition="Left" />
+				    <Control FieldName="Microsoft.VSTS.Common.BusinessValue" Type="FieldControl" Label="Business Value" LabelPosition="Left" />
 					<Control FieldName="SAFe.TimeSensitivity" Type="FieldControl" Label="Time Sensitivity" LabelPosition="Left" />
 					<Control FieldName="SAFe.RROE" Type="FieldControl" Label="Risk Reduction | Opportunity Enablement" LabelPosition="Left" />
 					<Control FieldName="SAFe.JobSize" Type="FieldControl" Label="Remaining Job Size" LabelPosition="Left" />
