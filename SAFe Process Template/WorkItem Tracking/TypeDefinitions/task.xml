@@ -295,7 +295,7 @@
                     </Column>
                 </Group>
                 <Group Margin="(10,0,0,0)">
-                  <Column PercentWidth="30">
+                  <Column PercentWidth="33">
                     <Group Label="Status">
                       <Column PercentWidth="100">
                         <Control FieldName="System.AssignedTo" EmptyText="&lt;No one&gt;" Type="FieldControl" Label="Assi&amp;gned To" LabelPosition="Left" />
@@ -304,16 +304,7 @@
                       </Column>
                     </Group>
                   </Column>
-                  <Column PercentWidth="20">
-                    <Group Label="Planning">
-                      <Column PercentWidth="100">
-                        <Control FieldName="Microsoft.VSTS.Common.StackRank" Type="FieldControl" Label="Stack Rank" LabelPosition="Left" NumberFormat="DecimalNumbers" MaxLength="10" EmptyText="&lt;None&gt;" />
-                        <Control FieldName="Microsoft.VSTS.Common.Priority" Type="FieldControl" Label="Priority" LabelPosition="Left" />
-                        <Control FieldName="Microsoft.VSTS.Common.Activity" Type="FieldControl" Label="Activity" LabelPosition="Left" EmptyText="&lt;None&gt;" />
-                      </Column>
-                    </Group>
-                  </Column>
-                  <Column PercentWidth="30">
+                  <Column PercentWidth="33">
                     <Group Label="Classification">
                       <Column PercentWidth="100">
                         <Control FieldName="System.AreaPath" Type="WorkItemClassificationControl" Label="&amp;Area" LabelPosition="Left" />
@@ -321,7 +312,7 @@
                       </Column>
                     </Group>
                   </Column>
-                  <Column PercentWidth="20">
+                  <Column PercentWidth="33">
                     <Group Label="Effort (Hours)">
                       <Column PercentWidth="100">
                         <Control FieldName="Microsoft.VSTS.Scheduling.OriginalEstimate" Type="FieldControl" Label="Original Estimate" LabelPosition="Left" />
