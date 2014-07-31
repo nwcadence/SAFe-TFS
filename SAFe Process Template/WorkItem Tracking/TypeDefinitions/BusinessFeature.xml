@@ -298,6 +298,7 @@
         <TRANSITION from="Resolved" to="Active">
           <REASONS>
             <DEFAULTREASON value="Acceptance tests fail" />
+			<REASON value="Integration tests fail" />
           </REASONS>
           <FIELDS>
             <FIELD refname="Microsoft.VSTS.Common.ActivatedBy">
@@ -423,7 +424,7 @@
         <Group>
           <Column PercentWidth="70">
             <TabGroup>
-              <Tab Label="Details">
+              <Tab Label="Benefit and Details">
                 <Control FieldName="System.Description" Type="HtmlFieldControl" Dock="Fill" />
               </Tab>
               <Tab Label="Implementation">
@@ -483,9 +484,6 @@
                 </Group>
                 <Group Label="Planning">
                   <Column PercentWidth="100">
-                    <Control FieldName="Microsoft.VSTS.Common.Priority" Type="FieldControl" Label="Priority" LabelPosition="Left" />
-                    <Control FieldName="Microsoft.VSTS.Common.Risk" Type="FieldControl" Label="Risk" LabelPosition="Left" />
-                    <Control FieldName="Microsoft.VSTS.Common.BusinessValue" Type="FieldControl" Label="Business Value" LabelPosition="Left" />
                     <Control FieldName="Microsoft.VSTS.Scheduling.TargetDate" Type="DateTimeControl" Label="Target Date" LabelPosition="Left" />
                   </Column>
                 </Group>

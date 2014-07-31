@@ -494,8 +494,6 @@
                 </Group>
                 <Group Label="Planning">
                   <Column PercentWidth="100">
-                    <Control FieldName="Microsoft.VSTS.Common.Priority" Type="FieldControl" Label="Priority" LabelPosition="Left" />
-                    <Control FieldName="Microsoft.VSTS.Common.Risk" Type="FieldControl" Label="Risk" LabelPosition="Left" />
                     <Control FieldName="Microsoft.VSTS.Scheduling.TargetDate" Type="DateTimeControl" Label="Target Date" LabelPosition="Left" />
                     <Control FieldName="SAFe.IncrementalImplementation" Type="FieldControl" Label="Incremental Implementation?" LabelPosition="Left" />
                   </Column>
