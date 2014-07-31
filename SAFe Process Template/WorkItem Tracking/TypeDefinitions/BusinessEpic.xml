@@ -151,6 +151,9 @@
         <DEFAULT from="value" value="No" />
         <HELPTEXT>Whether or not the project will be outsourced</HELPTEXT>
       </FIELD>
+      <FIELD name="WSJF" refname="SAFe.WSJF" type="Integer" reportable="dimension">
+        <HELPTEXT>Manually calculated: (Value + RROE + Time Criticalness) / Remaining Effort</HELPTEXT>
+      </FIELD>
     </FIELDS>
     <WORKFLOW>
       <STATES>
@@ -521,6 +524,7 @@
                     <Control FieldName="SAFe.TimeSensitivity" Type="FieldControl" Label="Time Sensitivity" LabelPosition="Left" />
                     <Control FieldName="SAFe.RROE" Type="FieldControl" Label="Risk Reduction | Opportunity Enablement" LabelPosition="Left" />
                     <Control FieldName="SAFe.JobSize" Type="FieldControl" Label="Remaining Job Size" LabelPosition="Left" />
+                    <Control FieldName="SAFe.WSJF" Type="FieldControl" Label="WSJF" LabelPosition="Left" />
                   </Column>
                 </Group>
                 <Group Label="Classification">
