@@ -138,6 +138,25 @@
     </FIELDS>
     <WORKFLOW>
       <STATES>
+	    <STATE value="New">
+		  <FIELDS>
+            <FIELD refname="Microsoft.VSTS.Common.ResolvedDate">
+              <EMPTY />
+            </FIELD>
+            <FIELD refname="Microsoft.VSTS.Common.ResolvedBy">
+              <EMPTY />
+            </FIELD>
+            <FIELD refname="Microsoft.VSTS.Common.ResolvedReason">
+              <EMPTY />
+            </FIELD>
+            <FIELD refname="Microsoft.VSTS.Common.ClosedDate">
+              <EMPTY />
+            </FIELD>
+            <FIELD refname="Microsoft.VSTS.Common.ClosedBy">
+              <EMPTY />
+            </FIELD>
+          </FIELDS>
+        </STATE>
         <STATE value="Active">
           <FIELDS>
             <FIELD refname="Microsoft.VSTS.Common.ResolvedDate">
@@ -179,10 +198,15 @@
         </STATE>
       </STATES>
       <TRANSITIONS>
-        <TRANSITION from="" to="Active">
+        <TRANSITION from="" to="New">
           <REASONS>
             <REASON value="Build Failure" />
             <DEFAULTREASON value="New" />
+          </REASONS>
+        </TRANSITION>
+		<TRANSITION from="New" to="Active">
+          <REASONS>
+            <DEFAULTREASON value="Added to backlog" />
           </REASONS>
           <FIELDS>
             <FIELD refname="Microsoft.VSTS.Common.ActivatedBy">

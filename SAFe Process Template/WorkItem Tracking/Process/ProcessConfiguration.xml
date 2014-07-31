@@ -119,6 +119,7 @@
   </TaskBacklog>
   <BugWorkItems category="Microsoft.BugCategory" pluralName="Bugs" singularName="Bug">
     <States>
+	  <State value="New" type="Proposed" />
       <State value="Active" type="InProgress" />
       <State value="Resolved" type="Resolved" />
       <State value="Closed" type="Complete" />
