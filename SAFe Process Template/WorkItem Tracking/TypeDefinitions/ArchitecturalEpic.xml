@@ -3,6 +3,20 @@
   <WORKITEMTYPE name="Architectural Epic">
     <DESCRIPTION>Epics are enterprise initiatives that are sufficiently substantial in scope so as to warrant analysis and understanding of potential ROI.</DESCRIPTION>
     <FIELDS>
+	<!-- **************** Custom Fields ***************** -->
+      <FIELD name="Time Sensitivity" refname="SAFe.TimeSensitivity" type="Double" reportable="dimension">
+        <HELPTEXT>Relative sensitivity to implementation time</HELPTEXT>
+      </FIELD>
+      <FIELD name="Risk Reduction Opportunity Enablement" refname="SAFe.RROE" type="Integer" reportable="dimension">
+        <HELPTEXT>Relative risk reduction and/or opportunity enablement generated</HELPTEXT>
+      </FIELD>
+      <FIELD name="Remaining Job Size" refname="SAFe.JobSize" type="Integer" reportable="dimension">
+        <HELPTEXT>Relative remaining job size (MUST IGNORE SUNK COSTS)</HELPTEXT>
+      </FIELD>
+	  <FIELD name="WSJF" refname="SAFe.WSJF" type="Integer" reportable="dimension">
+        <HELPTEXT>Manually calculated: (Value + RROE + Time Criticalness) / Remaining Effort</HELPTEXT>
+      </FIELD>
+	<!-- **************** End Custom Fields ***************** -->
       <FIELD name="Id" refname="System.Id" type="Integer" reportable="dimension" />
       <FIELD name="Title" refname="System.Title" type="String" reportable="dimension">
         <REQUIRED />
@@ -108,16 +122,7 @@
       <FIELD name="Business Value" refname="Microsoft.VSTS.Common.BusinessValue" type="Integer" reportable="measure">
         <HELPTEXT>The business value for the customer when the epic is released</HELPTEXT>
       </FIELD>
-      <!-- **************** Custom Fields ***************** -->
-      <FIELD name="Time Sensitivity" refname="SAFe.TimeSensitivity" type="Double" reportable="dimension">
-        <HELPTEXT>Relative sensitivity to implementation time</HELPTEXT>
-      </FIELD>
-      <FIELD name="Risk Reduction Opportunity Enablement" refname="SAFe.RROE" type="Integer" reportable="dimension">
-        <HELPTEXT>Relative risk reduction and/or opportunity enablement generated</HELPTEXT>
-      </FIELD>
-      <FIELD name="Remaining Job Size" refname="SAFe.JobSize" type="Integer" reportable="dimension">
-        <HELPTEXT>Relative remaining job size (MUST IGNORE SUNK COSTS)</HELPTEXT>
-      </FIELD>
+      
       <!-- **************** Team Build Integration Fields **************  -->
       <FIELD name="Integration Build" refname="Microsoft.VSTS.Build.IntegrationBuild" type="String" reportable="dimension">
         <SUGGESTEDVALUES expanditems="true">
@@ -133,9 +138,6 @@
         </ALLOWEDVALUES>
         <DEFAULT from="value" value="Yes" />
         <HELPTEXT>Whether this can be implemented incrementally</HELPTEXT>
-      </FIELD>
-      <FIELD name="WSJF" refname="SAFe.WSJF" type="Integer" reportable="dimension">
-        <HELPTEXT>Manually calculated: (Value + RROE + Time Criticalness) / Remaining Effort</HELPTEXT>
       </FIELD>
     </FIELDS>
     <WORKFLOW>
