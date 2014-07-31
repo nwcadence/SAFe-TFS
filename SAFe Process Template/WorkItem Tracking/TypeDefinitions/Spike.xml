@@ -1,8 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <witd:WITD application="Work item type editor" version="1.0" xmlns:witd="http://schemas.microsoft.com/VisualStudio/2008/workitemtracking/typedef">
   <WORKITEMTYPE name="Spike">
-    <DESCRIPTION>Tracks an activity the user will be able to perform with the product</DESCRIPTION>
+    <DESCRIPTION>An estimable, demonstrable research story designed to reduce risk or other unknowns.</DESCRIPTION>
     <FIELDS>
+	  <!-- *********************** Custom Fields ********************** -->
+	  <FIELD name="Spike Type" refname="SAFe.SpikeType" type="String" reportable="dimension" >
+	    <HELPTEXT>Whether the Spike is Technical or Functional</HELPTEXT>
+		<ALLOWEDVALUES>
+		  <LISTITEM value="Technical" />
+		  <LISTITEM value="Functional" />
+		</ALLOWEDVALUES>
+		<DEFAULT from="value" value="Functional" />
+	  </FIELD>
+	  <!-- *********************** End Custom Fields ********************** -->
+	  <FIELD name="Acceptance Criteria" refname="Microsoft.VSTS.Common.AcceptanceCriteria" type="HTML" />
       <FIELD name="Id" refname="System.Id" type="Integer" reportable="dimension" />
       <FIELD name="Title" refname="System.Title" type="String" reportable="dimension">
         <REQUIRED />
@@ -403,7 +414,14 @@
           <Column PercentWidth="70">
             <TabGroup>
               <Tab Label="Details">
-                <Control FieldName="System.Description" Type="HtmlFieldControl" Dock="Fill" />
+			    <Group>
+				  <Column PercentWidth="50">
+				    <Control FieldName="System.Description" Type="HtmlFieldControl" Dock="Fill" Label="Description" LabelPosition="Top"/>
+				  </Column>
+				  <Column PercentWidth="50">
+					<Control FieldName="Microsoft.VSTS.Common.AcceptanceCriteria" Type="HtmlFieldControl" Dock="Fill" Label="Acceptance Criteria" LabelPosition="Top"/>
+				  </Column>
+				</Group>
               </Tab>
               <Tab Label="Storyboards">
                 <Control Type="LinksControl" Name="StoryboardsControl">
@@ -500,8 +518,7 @@
                 <Group Label="Planning">
                   <Column PercentWidth="100">
                     <Control FieldName="Microsoft.VSTS.Scheduling.StoryPoints" Type="FieldControl" Label="Story Points" LabelPosition="Left" />
-                    <Control FieldName="Microsoft.VSTS.Common.Risk" Type="FieldControl" Label="Risk" LabelPosition="Left" />
-                    <Control FieldName="Microsoft.VSTS.Common.StackRank" Type="FieldControl" Label="Stack Rank" LabelPosition="Left" />
+					<Control FieldName="SAFe.SpikeType" Type="FieldControl" Label="Type of Spike" LabelPosition="Left" />
                   </Column>
                 </Group>
                 <Group Label="Classification">
