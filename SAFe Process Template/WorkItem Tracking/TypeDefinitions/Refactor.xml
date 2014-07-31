@@ -403,7 +403,8 @@
         <Group>
           <Column PercentWidth="70">
             <TabGroup>
-              <Group>
+			  <Tab Label="Details">
+                <Group>
 				  <Column PercentWidth="50">
 				    <Control FieldName="System.Description" Type="HtmlFieldControl" Dock="Fill" Label="Description" LabelPosition="Top"/>
 				  </Column>
@@ -411,6 +412,7 @@
 					<Control FieldName="Microsoft.VSTS.Common.AcceptanceCriteria" Type="HtmlFieldControl" Dock="Fill" Label="Acceptance Criteria" LabelPosition="Top"/>
 				  </Column>
 				</Group>
+			  </Tab>
               <Tab Label="Storyboards">
                 <Control Type="LinksControl" Name="StoryboardsControl">
                   <LinksControlOptions>

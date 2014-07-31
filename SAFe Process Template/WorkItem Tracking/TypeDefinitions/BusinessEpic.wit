@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<workItemType xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="12.0.0.0" Name="Business Epic" source="businessepic.xml" xmlns="http://schemas.microsoft.com/dsltools/WITDesigner">
+  <States>
+    <state Name="Closed">
+      <fields>
+        <stateFieldConstraint Id="9083a5f9-f01c-4148-bf2f-b195d2c7bb75" ruleTag="* ">
+          <fieldMoniker Name="/Business Epic/Business Value" />
+        </stateFieldConstraint>
+      </fields>
+    </state>
+    <state Name="Removed" />
+    <state Name="Funnel">
+      <Source>
+        <transitionMoniker Name="/Business Epic/Funnel~Review" />
+        <transitionMoniker Name="/Business Epic/Funnel~Removed" />
+      </Source>
+      <fields>
+        <stateFieldConstraint Id="b5c8dcb1-6f44-4655-b3c2-ad0670d0db57" ruleTag="- ">
+          <fieldMoniker Name="/Business Epic/Resolved Date" />
+        </stateFieldConstraint>
+        <stateFieldConstraint Id="dc0869d1-6197-425d-80fd-fe2a57bb56c8" ruleTag="- ">
+          <fieldMoniker Name="/Business Epic/Resolved By" />
+        </stateFieldConstraint>
+        <stateFieldConstraint Id="fa0edd15-43c0-4a96-8a57-7811ad26b0d6" ruleTag="- ">
+          <fieldMoniker Name="/Business Epic/Closed Date" />
+        </stateFieldConstraint>
+        <stateFieldConstraint Id="31ac8caf-dd2e-4244-9ad4-a023fa0140a8" ruleTag="- ">
+          <fieldMoniker Name="/Business Epic/Closed By" />
+        </stateFieldConstraint>
+        <stateFieldConstraint Id="05d3e7ad-988b-4eb7-b480-778c0e62c7ca" ruleTag="- ">
+          <fieldMoniker Name="/Business Epic/Activated Date" />
+        </stateFieldConstraint>
+        <stateFieldConstraint Id="033c7c09-064c-43a6-a48b-2d0d7bc1cf89" ruleTag="- ">
+          <fieldMoniker Name="/Business Epic/Activated By" />
+        </stateFieldConstraint>
+      </fields>
+    </state>
+    <state Name="Review">
+      <Source>
+        <transitionMoniker Name="/Business Epic/Review~Analysis" />
+        <transitionMoniker Name="/Business Epic/Review~Removed" />
+        <transitionMoniker Name="/Business Epic/Review~Funnel" />
+      </Source>
+      <fields>
+        <stateFieldConstraint Id="dea7340a-3931-48fb-815d-ad3a14a03170" ruleTag="- ">
+          <fieldMoniker Name="/Business Epic/Resolved Date" />
+        </stateFieldConstraint>
+        <stateFieldConstraint Id="e5175224-5a4e-4b54-94fa-535177bde277" ruleTag="- ">
+          <fieldMoniker Name="/Business Epic/Resolved By" />
+        </stateFieldConstraint>
+        <stateFieldConstraint Id="96597e25-1b34-496b-adde-f158888f003c" ruleTag="- ">
+          <fieldMoniker Name="/Business Epic/Closed Date" />
+        </stateFieldConstraint>
+        <stateFieldConstraint Id="fa9d4ee9-436b-47a7-9010-8579d40bc592" ruleTag="- ">
+          <fieldMoniker Name="/Business Epic/Closed By" />
+        </stateFieldConstraint>
+      </fields>
+    </state>
+    <state Name="Analysis">
+      <Source>
+        <transitionMoniker Name="/Business Epic/Analysis~Portfolio Backlog" />
+        <transitionMoniker Name="/Business Epic/Analysis~Removed" />
+      </Source>
+      <fields>
+        <stateFieldConstraint Id="7b238ac2-9012-4172-8277-7cdadb2d2cf3" ruleTag="- ">
+          <fieldMoniker Name="/Business Epic/Resolved Date" />
+        </stateFieldConstraint>
+        <stateFieldConstraint Id="16016306-5fd8-4f17-b3a9-7c4aaaaf4fed" ruleTag="- ">
+          <fieldMoniker Name="/Business Epic/Resolved By" />
+        </stateFieldConstraint>
+        <stateFieldConstraint Id="2bcce549-7f8f-4753-b6a7-370d7c71703c" ruleTag="- ">
+          <fieldMoniker Name="/Business Epic/Closed Date" />
+        </stateFieldConstraint>
+        <stateFieldConstraint Id="2e3194e2-6129-4693-8eb2-58a34c8e5a60" ruleTag="- ">
+          <fieldMoniker Name="/Business Epic/Closed By" />
+        </stateFieldConstraint>
+      </fields>
+    </state>
+    <state Name="Portfolio Backlog">
+      <Source>
+        <transitionMoniker Name="/Business Epic/Portfolio Backlog~Implementing" />
+        <transitionMoniker Name="/Business Epic/Portfolio Backlog~Removed" />
+        <transitionMoniker Name="/Business Epic/Portfolio Backlog~Analysis" />
+      </Source>
+      <fields>
+        <stateFieldConstraint Id="bc8d9a3e-774f-4212-ac51-906e9c034c4b" ruleTag="- ">
+          <fieldMoniker Name="/Business Epic/Resolved Date" />
+        </stateFieldConstraint>
+        <stateFieldConstraint Id="ccf7b6d2-a9e7-49b1-8b18-bf1a6c9c8b6b" ruleTag="- ">
+          <fieldMoniker Name="/Business Epic/Resolved By" />
+        </stateFieldConstraint>
+        <stateFieldConstraint Id="39d70504-bb06-439c-b2ff-0f0e801d30c3" ruleTag="- ">
+          <fieldMoniker Name="/Business Epic/Closed Date" />
+        </stateFieldConstraint>
+        <stateFieldConstraint Id="5ca0435e-cf39-4814-b27b-392e3fc35d6a" ruleTag="- ">
+          <fieldMoniker Name="/Business Epic/Closed By" />
+        </stateFieldConstraint>
+      </fields>
+    </state>
+    <state Name="Implementing">
+      <Source>
+        <transitionMoniker Name="/Business Epic/Implementing~Closed" />
+      </Source>
+      <fields>
+        <stateFieldConstraint Id="54550f7a-7229-45fe-bd6b-2d0d3ec48eb4" ruleTag="- ">
+          <fieldMoniker Name="/Business Epic/Resolved Date" />
+        </stateFieldConstraint>
+        <stateFieldConstraint Id="825d1e54-44a6-4f56-88a1-5dc42ef33bc1" ruleTag="- ">
+          <fieldMoniker Name="/Business Epic/Resolved By" />
+        </stateFieldConstraint>
+        <stateFieldConstraint Id="f75b5e4a-756e-4d98-b33c-68db41d0dcb2" ruleTag="- ">
+          <fieldMoniker Name="/Business Epic/Closed Date" />
+        </stateFieldConstraint>
+        <stateFieldConstraint Id="4ab1d8cf-a9fe-4637-ba00-9ca645983537" ruleTag="- ">
+          <fieldMoniker Name="/Business Epic/Closed By" />
+        </stateFieldConstraint>
+      </fields>
+    </state>
+  </States>
+  <Fields>
+    <field Name="Activated By" referenceName="Microsoft.VSTS.Common.ActivatedBy" />
+    <field Name="Activated Date" referenceName="Microsoft.VSTS.Common.ActivatedDate" />
+    <field Name="Assigned To" referenceName="System.AssignedTo" />
+    <field Name="Resolved Date" referenceName="Microsoft.VSTS.Common.ResolvedDate" />
+    <field Name="Resolved By" referenceName="Microsoft.VSTS.Common.ResolvedBy" />
+    <field Name="Closed Date" referenceName="Microsoft.VSTS.Common.ClosedDate" />
+    <field Name="Closed By" referenceName="Microsoft.VSTS.Common.ClosedBy" />
+    <field Name="Business Value" referenceName="Microsoft.VSTS.Common.BusinessValue" />
+  </Fields>
+  <Transitions>
+    <transition Id="c64a4c14-5a55-42ef-b80c-8a6903304342" Name="~Funnel">
+      <Target>
+        <stateMoniker Name="/Business Epic/Funnel" />
+      </Target>
+      <Reasons>
+        <reason Name="New" />
+      </Reasons>
+    </transition>
+    <transition Id="d5932fe5-b928-41d6-a639-40df558e0d8a" Name="Funnel~Review">
+      <Target>
+        <stateMoniker Name="/Business Epic/Review" />
+      </Target>
+      <Reasons>
+        <reason Name="Review started" />
+      </Reasons>
+      <fields>
+        <transitionFieldConstraint ruleTag="+* ">
+          <fieldMoniker Name="/Business Epic/Activated By" />
+        </transitionFieldConstraint>
+        <transitionFieldConstraint ruleTag="* ">
+          <fieldMoniker Name="/Business Epic/Activated Date" />
+        </transitionFieldConstraint>
+        <transitionFieldConstraint ruleTag="* ">
+          <fieldMoniker Name="/Business Epic/Assigned To" />
+        </transitionFieldConstraint>
+      </fields>
+    </transition>
+    <transition Id="d2c0ea18-b6c3-4a6b-9eb3-cfbf745adbf9" Name="Review~Analysis">
+      <Target>
+        <stateMoniker Name="/Business Epic/Analysis" />
+      </Target>
+      <Reasons>
+        <reason Name="Review approved, Analysis started" />
+      </Reasons>
+    </transition>
+    <transition Id="e419153f-d2ac-4198-844e-4a100832cdd2" Name="Analysis~Portfolio Backlog">
+      <Target>
+        <stateMoniker Name="/Business Epic/Portfolio Backlog" />
+      </Target>
+      <Reasons>
+        <reason Name="Ready for implementation" />
+      </Reasons>
+    </transition>
+    <transition Id="2faed06a-d05a-412a-977d-777c0360b5a0" Name="Portfolio Backlog~Implementing">
+      <Target>
+        <stateMoniker Name="/Business Epic/Implementing" />
+      </Target>
+      <Reasons>
+        <reason Name="Implementation started" />
+      </Reasons>
+    </transition>
+    <transition Id="a36beddd-b661-4071-9cc2-5c8b7055324a" Name="Implementing~Closed">
+      <Target>
+        <stateMoniker Name="/Business Epic/Closed" />
+      </Target>
+      <Reasons>
+        <reason Name="Implementation complete" />
+      </Reasons>
+      <fields>
+        <transitionFieldConstraint ruleTag="* ">
+          <fieldMoniker Name="/Business Epic/Activated Date" />
+        </transitionFieldConstraint>
+        <transitionFieldConstraint ruleTag="* ">
+          <fieldMoniker Name="/Business Epic/Activated By" />
+        </transitionFieldConstraint>
+        <transitionFieldConstraint ruleTag="* ">
+          <fieldMoniker Name="/Business Epic/Resolved Date" />
+        </transitionFieldConstraint>
+        <transitionFieldConstraint ruleTag="+* ">
+          <fieldMoniker Name="/Business Epic/Resolved By" />
+        </transitionFieldConstraint>
+        <transitionFieldConstraint ruleTag="* ">
+          <fieldMoniker Name="/Business Epic/Closed Date" />
+        </transitionFieldConstraint>
+        <transitionFieldConstraint ruleTag="+* ">
+          <fieldMoniker Name="/Business Epic/Closed By" />
+        </transitionFieldConstraint>
+      </fields>
+    </transition>
+    <transition Id="8dc5db07-3aeb-438e-9ad2-b625b91cbb56" Name="Funnel~Removed">
+      <Target>
+        <stateMoniker Name="/Business Epic/Removed" />
+      </Target>
+      <Reasons>
+        <reason Name="Removed from consideration" />
+      </Reasons>
+    </transition>
+    <transition Id="c837ea14-2351-4644-ac75-fd722376a65a" Name="Review~Removed">
+      <Target>
+        <stateMoniker Name="/Business Epic/Removed" />
+      </Target>
+      <Reasons>
+        <reason Name="Removed from consideration during Review" />
+      </Reasons>
+    </transition>
+    <transition Id="c9e7e258-a21b-4e02-b31a-600875eaf2d2" Name="Analysis~Removed">
+      <Target>
+        <stateMoniker Name="/Business Epic/Removed" />
+      </Target>
+      <Reasons>
+        <reason Name="Removed from consideration during Analysis" />
+      </Reasons>
+    </transition>
+    <transition Id="cea1ae3a-a91e-4577-9cf0-78f7daa72529" Name="Portfolio Backlog~Removed">
+      <Target>
+        <stateMoniker Name="/Business Epic/Removed" />
+      </Target>
+      <Reasons>
+        <reason Name="Removed from consideration after being on backlog" />
+      </Reasons>
+    </transition>
+    <transition Id="6a54fd1e-d958-446d-889d-32521f955e83" Name="Portfolio Backlog~Analysis">
+      <Target>
+        <stateMoniker Name="/Business Epic/Analysis" />
+      </Target>
+      <Reasons>
+        <reason Name="More Analysis needed" />
+      </Reasons>
+    </transition>
+    <transition Id="bbb637bf-026e-492b-b49d-4aa20da2026a" Name="Review~Funnel">
+      <Target>
+        <stateMoniker Name="/Business Epic/Funnel" />
+      </Target>
+      <Reasons>
+        <reason Name="May be considered again in the future" />
+      </Reasons>
+    </transition>
+  </Transitions>
+</workItemType>

@@ -37,9 +37,11 @@
     </PortfolioBacklog>
 	<PortfolioBacklog category="SAFe.EpicCategory" parent="SAFe.StrategicThemeCategory" pluralName="Epics" singularName="Epic">
       <States>
-        <State value="New" type="Proposed" />
-        <State value="Active" type="InProgress" />
-        <State value="Resolved" type="InProgress" />
+        <State value="Funnel" type="Proposed" />
+		<State value="Review" type="Proposed" />
+		<State value="Analysis" type="Proposed" />
+        <State value="Portfolio Backlog" type="InProgress" />
+        <State value="Implementing" type="InProgress" />
         <State value="Closed" type="Complete" />
       </States>
       <Columns>

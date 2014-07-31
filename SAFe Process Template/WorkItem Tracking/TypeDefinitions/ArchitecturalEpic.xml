@@ -142,7 +142,7 @@
     </FIELDS>
     <WORKFLOW>
       <STATES>
-        <STATE value="New">
+        <STATE value="Funnel">
           <FIELDS>
             <FIELD refname="Microsoft.VSTS.Common.ResolvedDate">
               <EMPTY />
@@ -164,7 +164,7 @@
             </FIELD>
           </FIELDS>
         </STATE>
-        <STATE value="Active">
+        <STATE value="Review">
           <FIELDS>
             <FIELD refname="Microsoft.VSTS.Common.ResolvedDate">
               <EMPTY />
@@ -180,8 +180,14 @@
             </FIELD>
           </FIELDS>
         </STATE>
-        <STATE value="Resolved">
-          <FIELDS>
+		<STATE value="Analysis">
+		  <FIELDS>
+            <FIELD refname="Microsoft.VSTS.Common.ResolvedDate">
+              <EMPTY />
+            </FIELD>
+            <FIELD refname="Microsoft.VSTS.Common.ResolvedBy">
+              <EMPTY />
+            </FIELD>
             <FIELD refname="Microsoft.VSTS.Common.ClosedDate">
               <EMPTY />
             </FIELD>
@@ -189,7 +195,39 @@
               <EMPTY />
             </FIELD>
           </FIELDS>
-        </STATE>
+		</STATE>
+		<STATE value="Portfolio Backlog">
+		  <FIELDS>
+            <FIELD refname="Microsoft.VSTS.Common.ResolvedDate">
+              <EMPTY />
+            </FIELD>
+            <FIELD refname="Microsoft.VSTS.Common.ResolvedBy">
+              <EMPTY />
+            </FIELD>
+            <FIELD refname="Microsoft.VSTS.Common.ClosedDate">
+              <EMPTY />
+            </FIELD>
+            <FIELD refname="Microsoft.VSTS.Common.ClosedBy">
+              <EMPTY />
+            </FIELD>
+          </FIELDS>
+		</STATE>
+		<STATE value="Implementing">
+		  <FIELDS>
+            <FIELD refname="Microsoft.VSTS.Common.ResolvedDate">
+              <EMPTY />
+            </FIELD>
+            <FIELD refname="Microsoft.VSTS.Common.ResolvedBy">
+              <EMPTY />
+            </FIELD>
+            <FIELD refname="Microsoft.VSTS.Common.ClosedDate">
+              <EMPTY />
+            </FIELD>
+            <FIELD refname="Microsoft.VSTS.Common.ClosedBy">
+              <EMPTY />
+            </FIELD>
+          </FIELDS>
+		</STATE>
         <STATE value="Closed">
           <FIELDS>
             <FIELD refname="Microsoft.VSTS.Common.BusinessValue">
@@ -200,14 +238,14 @@
         <STATE value="Removed" />
       </STATES>
       <TRANSITIONS>
-        <TRANSITION from="" to="New">
+        <TRANSITION from="" to="Funnel">
           <REASONS>
             <DEFAULTREASON value="New" />
           </REASONS>
         </TRANSITION>
-        <TRANSITION from="New" to="Active">
+        <TRANSITION from="Funnel" to="Review">
           <REASONS>
-            <DEFAULTREASON value="Implementation started" />
+            <DEFAULTREASON value="Review started" />
           </REASONS>
           <FIELDS>
             <FIELD refname="Microsoft.VSTS.Common.ActivatedBy">
@@ -223,78 +261,41 @@
             </FIELD>
           </FIELDS>
         </TRANSITION>
-        <TRANSITION from="New" to="Resolved">
-          <REASONS>
-            <DEFAULTREASON value="Stories complete" />
+        <TRANSITION from="Review" to="Analysis">
+		  <REASONS>
+		    <DEFAULTREASON value="Review approved, Analysis started" />
           </REASONS>
-          <FIELDS>
+		</TRANSITION>
+		<TRANSITION from="Analysis" to="Portfolio Backlog">
+		  <REASONS>
+		    <DEFAULTREASON value="Ready for implementation" />
+          </REASONS>
+		</TRANSITION>
+		<TRANSITION from="Portfolio Backlog" to="Implementing">
+		  <REASONS>
+		    <DEFAULTREASON value="Implementation started" />
+          </REASONS>
+		</TRANSITION>
+		<TRANSITION from="Implementing" to="Closed">
+		  <REASONS>
+		    <DEFAULTREASON value="Implementation complete" />
+          </REASONS>
+		  <FIELDS>
             <FIELD refname="Microsoft.VSTS.Common.ActivatedDate">
-              <SERVERDEFAULT from="clock" />
+              <READONLY />
             </FIELD>
             <FIELD refname="Microsoft.VSTS.Common.ActivatedBy">
-              <COPY from="currentuser" />
-            </FIELD>
-            <FIELD refname="System.AssignedTo">
-              <DEFAULT from="currentuser" />
+              <READONLY />
             </FIELD>
             <FIELD refname="Microsoft.VSTS.Common.ResolvedDate">
               <SERVERDEFAULT from="clock" />
+			  <READONLY />
             </FIELD>
             <FIELD refname="Microsoft.VSTS.Common.ResolvedBy">
               <COPY from="currentuser" />
               <VALIDUSER />
               <REQUIRED />
-            </FIELD>
-          </FIELDS>
-        </TRANSITION>
-        <TRANSITION from="New" to="Removed">
-          <REASONS>
-            <DEFAULTREASON value="Removed from the backlog" />
-          </REASONS>
-        </TRANSITION>
-        <TRANSITION from="Active" to="New">
-          <REASONS>
-            <REASON value="Implementation halted" />
-            <DEFAULTREASON value="Moved to the backlog" />
-          </REASONS>
-        </TRANSITION>
-        <TRANSITION from="Active" to="Resolved">
-          <REASONS>
-            <DEFAULTREASON value="Stories complete" />
-          </REASONS>
-          <FIELDS>
-            <FIELD refname="Microsoft.VSTS.Common.ActivatedDate">
-              <READONLY />
-            </FIELD>
-            <FIELD refname="Microsoft.VSTS.Common.ActivatedBy">
-              <READONLY />
-            </FIELD>
-            <FIELD refname="Microsoft.VSTS.Common.ResolvedDate">
-              <SERVERDEFAULT from="clock" />
-            </FIELD>
-            <FIELD refname="Microsoft.VSTS.Common.ResolvedBy">
-              <COPY from="currentuser" />
-              <VALIDUSER />
-              <REQUIRED />
-            </FIELD>
-          </FIELDS>
-        </TRANSITION>
-        <TRANSITION from="Resolved" to="Closed">
-          <REASONS>
-            <DEFAULTREASON value="Acceptance tests pass" />
-          </REASONS>
-          <FIELDS>
-            <FIELD refname="Microsoft.VSTS.Common.ActivatedDate">
-              <READONLY />
-            </FIELD>
-            <FIELD refname="Microsoft.VSTS.Common.ActivatedBy">
-              <READONLY />
-            </FIELD>
-            <FIELD refname="Microsoft.VSTS.Common.ResolvedDate">
-              <READONLY />
-            </FIELD>
-            <FIELD refname="Microsoft.VSTS.Common.ResolvedBy">
-              <READONLY />
+			  <READONLY />
             </FIELD>
             <FIELD refname="Microsoft.VSTS.Common.ClosedDate">
               <SERVERDEFAULT from="clock" />
@@ -305,122 +306,36 @@
               <REQUIRED />
             </FIELD>
           </FIELDS>
-        </TRANSITION>
-        <TRANSITION from="Resolved" to="Active">
+		</TRANSITION>
+        <TRANSITION from="Funnel" to="Removed">
           <REASONS>
-            <DEFAULTREASON value="Acceptance tests fail" />
-          </REASONS>
-          <FIELDS>
-            <FIELD refname="Microsoft.VSTS.Common.ActivatedBy">
-              <COPY from="currentuser" />
-              <VALIDUSER />
-              <REQUIRED />
-            </FIELD>
-            <FIELD refname="Microsoft.VSTS.Common.ActivatedDate">
-              <SERVERDEFAULT from="clock" />
-            </FIELD>
-          </FIELDS>
-        </TRANSITION>
-        <TRANSITION from="Active" to="Closed">
-          <REASONS>
-            <REASON value="Abandoned" />
-            <REASON value="Out of scope" />
-            <REASON value="Rejected" />
-            <DEFAULTREASON value="Acceptance tests pass" />
-          </REASONS>
-          <FIELDS>
-            <FIELD refname="Microsoft.VSTS.Common.ActivatedDate">
-              <READONLY />
-            </FIELD>
-            <FIELD refname="Microsoft.VSTS.Common.ActivatedBy">
-              <READONLY />
-            </FIELD>
-            <FIELD refname="Microsoft.VSTS.Common.ResolvedDate">
-              <SERVERDEFAULT from="clock" />
-            </FIELD>
-            <FIELD refname="Microsoft.VSTS.Common.ResolvedBy">
-              <SERVERDEFAULT from="currentuser" />
-            </FIELD>
-            <FIELD refname="Microsoft.VSTS.Common.ClosedDate">
-              <SERVERDEFAULT from="clock" />
-            </FIELD>
-            <FIELD refname="Microsoft.VSTS.Common.ClosedBy">
-              <COPY from="currentuser" />
-              <VALIDUSER />
-              <REQUIRED />
-            </FIELD>
-          </FIELDS>
-        </TRANSITION>
-        <TRANSITION from="Closed" to="Active">
-          <REASONS>
-            <REASON value="Closed in error" />
-            <DEFAULTREASON value="Reintroduced in Scope" />
-          </REASONS>
-          <FIELDS>
-            <FIELD refname="Microsoft.VSTS.Common.ActivatedBy">
-              <COPY from="currentuser" />
-              <VALIDUSER />
-              <REQUIRED />
-            </FIELD>
-            <FIELD refname="Microsoft.VSTS.Common.ActivatedDate">
-              <SERVERDEFAULT from="clock" />
-            </FIELD>
-          </FIELDS>
-        </TRANSITION>
-        <TRANSITION from="Closed" to="Resolved">
-          <REASONS>
-            <DEFAULTREASON value="Closed in error" />
-          </REASONS>
-          <FIELDS>
-            <FIELD refname="Microsoft.VSTS.Common.ActivatedBy">
-              <COPY from="currentuser" />
-              <VALIDUSER />
-              <REQUIRED />
-            </FIELD>
-            <FIELD refname="Microsoft.VSTS.Common.ActivatedDate">
-              <SERVERDEFAULT from="clock" />
-            </FIELD>
-          </FIELDS>
-        </TRANSITION>
-        <TRANSITION from="Removed" to="New">
-          <REASONS>
-            <DEFAULTREASON value="Reconsidering the epic" />
+            <DEFAULTREASON value="Removed from consideration" />
           </REASONS>
         </TRANSITION>
-        <TRANSITION from="Resolved" to="New">
+		<TRANSITION from="Review" to="Removed">
           <REASONS>
-            <DEFAULTREASON value="Moved to the backlog" />
+            <DEFAULTREASON value="Removed from consideration during Review" />
           </REASONS>
         </TRANSITION>
-        <TRANSITION from="Closed" to="New">
+        <TRANSITION from="Analysis" to="Removed">
           <REASONS>
-            <DEFAULTREASON value="Moved to the backlog" />
+            <DEFAULTREASON value="Removed from consideration during Analysis" />
           </REASONS>
         </TRANSITION>
-        <TRANSITION from="New" to="Closed">
+		<TRANSITION from="Portfolio Backlog" to="Removed">
           <REASONS>
-            <DEFAULTREASON value="Acceptance tests pass" />
+            <DEFAULTREASON value="Removed from consideration after being on backlog" />
           </REASONS>
-          <FIELDS>
-            <FIELD refname="Microsoft.VSTS.Common.ActivatedDate">
-              <SERVERDEFAULT from="clock" />
-            </FIELD>
-            <FIELD refname="Microsoft.VSTS.Common.ActivatedBy">
-              <SERVERDEFAULT from="currentuser" />
-            </FIELD>
-            <FIELD refname="Microsoft.VSTS.Common.ResolvedDate">
-              <SERVERDEFAULT from="clock" />
-            </FIELD>
-            <FIELD refname="Microsoft.VSTS.Common.ResolvedBy">
-              <SERVERDEFAULT from="currentuser" />
-            </FIELD>
-            <FIELD refname="Microsoft.VSTS.Common.ClosedDate">
-              <SERVERDEFAULT from="clock" />
-            </FIELD>
-            <FIELD refname="Microsoft.VSTS.Common.ClosedBy">
-              <SERVERDEFAULT from="currentuser" />
-            </FIELD>
-          </FIELDS>
+        </TRANSITION>
+		<TRANSITION from="Portfolio Backlog" to="Analysis">
+          <REASONS>
+            <DEFAULTREASON value="More Analysis needed" />
+          </REASONS>
+        </TRANSITION>
+		<TRANSITION from="Review" to="Funnel">
+          <REASONS>
+            <DEFAULTREASON value="May be considered again in the future" />
+          </REASONS>
         </TRANSITION>
       </TRANSITIONS>
     </WORKFLOW>

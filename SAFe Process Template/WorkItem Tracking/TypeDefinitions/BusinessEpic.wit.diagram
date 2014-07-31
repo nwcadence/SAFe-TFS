@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wITWorkflow dslVersion="12.0.0.0" absoluteBounds="0, 0, 15.25, 8.5" name="BusinessEpic">
+  <workItemTypeMoniker Name="/Business Epic" />
+  <nestedChildShapes>
+    <stateShape Id="6962e6f1-8a4f-4c95-bebc-3389a5866454" absoluteBounds="13.5, 3.5, 1.5, 0.55230143229166684">
+      <stateMoniker Name="/Business Epic/Closed" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bcc31185-68ee-4079-9d6e-74dd1aa07cac" absoluteBounds="13.515, 3.76, 1.4700000000000002, 0.19230143229166666" name="Fields" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </stateShape>
+    <stateShape Id="0c02a1cc-b4e6-447b-9843-bd4b1a0d8586" absoluteBounds="13.5, 4.5, 1.5, 0.36">
+      <stateMoniker Name="/Business Epic/Removed" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9debe011-1182-44c1-89fe-e3c66855f849" absoluteBounds="13.515, 4.76, 1.4700000000000002, 0" name="Fields" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </stateShape>
+    <stateShape Id="6a216bcd-28b9-4c5f-9efb-4f1c66ca3d1a" absoluteBounds="0.5, 0.5, 1.5, 1.5138085937499999">
+      <stateMoniker Name="/Business Epic/Funnel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4578d148-6592-4a13-a2a7-0d233c717ebf" absoluteBounds="0.515, 0.76, 1.4700000000000002, 1.15380859375" name="Fields" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </stateShape>
+    <stateShape Id="1016d6fd-0886-4b7e-846e-6d7b9343ee69" absoluteBounds="3.5, 3.75, 1.5, 1.1292057291666668">
+      <stateMoniker Name="/Business Epic/Review" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1aaefc1d-a8ec-4713-86d9-3072eeeb99f3" absoluteBounds="3.515, 4.01, 1.4700000000000002, 0.76920572916666674" name="Fields" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </stateShape>
+    <stateShape Id="cafb3678-2fe1-48ee-8c7a-5cefa69a2146" absoluteBounds="6, 0.5, 1.5, 1.1292057291666668">
+      <stateMoniker Name="/Business Epic/Analysis" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7f263284-164b-4fd5-8348-80e2697aec61" absoluteBounds="6.015, 0.76, 1.4700000000000002, 0.76920572916666674" name="Fields" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </stateShape>
+    <stateShape Id="4bc56772-dcd7-4463-a60d-57a8bc8aabf7" absoluteBounds="8.125, 3.75, 1.5, 1.1292057291666668">
+      <stateMoniker Name="/Business Epic/Portfolio Backlog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bdb1fb70-cbcb-493b-a32e-8f5a6823aacc" absoluteBounds="8.14, 4.01, 1.4700000000000002, 0.76920572916666674" name="Fields" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </stateShape>
+    <stateShape Id="0642ccdb-5498-4510-a024-e536fda3e9d6" absoluteBounds="10.125, 0.5, 1.5, 1.1292057291666668">
+      <stateMoniker Name="/Business Epic/Implementing" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dee68078-8f52-406d-af55-89ed049ebac7" absoluteBounds="10.14, 0.76, 1.4700000000000002, 0.76920572916666674" name="Fields" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </stateShape>
+    <transitionShape Id="46030fe7-5bca-4ee0-9b2e-8df8bfafa224" isExpanded="false" absoluteBounds="0.5, 4.625, 1, 0.25">
+      <transitionMoniker Name="/Business Epic/~Funnel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="29ef1512-0422-4193-a9fb-4be4aaab447e" absoluteBounds="0.51499999999999968, 4.885, 0.97, 0.44169108072916663" name="Reasons" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="5466adb9-c60c-4d27-b887-13facab6c96c" absoluteBounds="0.51499999999999968, 5.3366910807291665, 0.97, 0.2693896484375" name="Actions" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="f9923a20-3d78-42e5-aeba-2566a47902b4" absoluteBounds="0.51499999999999968, 5.6160807291666668, 0.97, 0.24938964843750011" name="Fields" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </transitionShape>
+    <transitionShape Id="4f1e8002-26d5-4aee-82c5-c02890a4f6ed" isExpanded="false" absoluteBounds="2.25, 0.5, 1, 0.25">
+      <transitionMoniker Name="/Business Epic/Funnel~Review" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8f39563a-a386-4f20-a3e5-87f8507869da" absoluteBounds="2.2649999999999997, 0.75999999999999979, 0.97, 0.44169108072916663" name="Reasons" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="8d042bd0-b434-4c49-a494-8972a915ca31" absoluteBounds="2.2649999999999997, 1.2116910807291665, 0.97, 0.2493896484375" name="Actions" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="15f0058f-1c4d-43c8-bc9b-049ae2003d7e" absoluteBounds="2.2649999999999997, 1.4710807291666663, 0.97, 0.82629394531250011" name="Fields" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </transitionShape>
+    <transitionShape Id="02e8e23b-7093-42ff-97b7-0373171d8a96" isExpanded="false" absoluteBounds="4.375, 0.5, 1, 0.25">
+      <transitionMoniker Name="/Business Epic/Review~Analysis" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f0e3ad6c-74df-4ef0-843d-20c64c96a893" absoluteBounds="4.3900000000000006, 0.75999999999999979, 0.97, 0.44169108072916663" name="Reasons" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="13604689-5bfc-4abb-8649-907e148c9707" absoluteBounds="4.3900000000000006, 1.2116910807291665, 0.97, 0.2493896484375" name="Actions" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="d5bc90bb-5d20-48e6-9102-8608120a6bbe" absoluteBounds="4.3900000000000006, 1.4710807291666668, 0.97, 0.24938964843750011" name="Fields" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </transitionShape>
+    <transitionShape Id="9f9ab586-2a3e-4da7-a9d5-d641b6f9e7d0" isExpanded="false" absoluteBounds="7.125, 2.125, 1, 0.25">
+      <transitionMoniker Name="/Business Epic/Analysis~Portfolio Backlog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e1b55db0-4a60-486c-8750-a3e2198b2158" absoluteBounds="7.1400000000000006, 2.385, 0.97, 0.44169108072916663" name="Reasons" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="6a0cf03d-2da0-44c8-b66a-775c3f7daf89" absoluteBounds="7.1400000000000006, 2.8366910807291665, 0.97, 0.2493896484375" name="Actions" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="5383c9b2-227d-4125-95d2-c1c6aa26cbc8" absoluteBounds="7.1400000000000006, 3.0960807291666668, 0.97, 0.24938964843750011" name="Fields" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </transitionShape>
+    <transitionShape Id="7dee2b5b-e928-4bb0-9c22-525ee9bfedd7" isExpanded="false" absoluteBounds="8.75, 1.125, 1, 0.25">
+      <transitionMoniker Name="/Business Epic/Portfolio Backlog~Implementing" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6e896d01-6ec7-4b16-9e2c-fd83288afa9c" absoluteBounds="8.765, 1.3849999999999998, 0.97, 0.44169108072916663" name="Reasons" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="6beda2ae-12c3-477c-9a68-1e2fc2aa8c7d" absoluteBounds="8.765, 1.8366910807291665, 0.97, 0.2493896484375" name="Actions" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="21db2057-ed94-4525-a5a8-d655ac3d9e1b" absoluteBounds="8.765, 2.0960807291666672, 0.97, 0.24938964843750011" name="Fields" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </transitionShape>
+    <transitionShape Id="82824d15-7294-4634-ad22-77dda9192cba" isExpanded="false" absoluteBounds="13.5, 1.625, 1, 0.25">
+      <transitionMoniker Name="/Business Epic/Implementing~Closed" />
+      <nestedChildShapes>
+        <elementListCompartment Id="67ee88b4-2ca0-4845-ba69-39ed5bf6e802" absoluteBounds="13.515, 1.8849999999999998, 0.97, 0.44169108072916663" name="Reasons" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="b772a3cd-73ec-4cbf-936e-870e3aa717eb" absoluteBounds="13.515, 2.3366910807291665, 0.97, 0.2493896484375" name="Actions" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="92dd6a14-8957-478f-a02e-f7dba918e04e" absoluteBounds="13.515, 2.5960807291666668, 0.97, 1.4031982421875" name="Fields" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </transitionShape>
+    <transitionShape Id="880f1b3f-d3fb-49e3-976b-30b88faf587b" isExpanded="false" absoluteBounds="1.625, 5.375, 1, 0.25">
+      <transitionMoniker Name="/Business Epic/Funnel~Removed" />
+      <nestedChildShapes>
+        <elementListCompartment Id="46c80f87-f224-45f9-839f-b008918ed0ca" absoluteBounds="1.6400000000000006, 5.635, 0.97, 0.44169108072916663" name="Reasons" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="8a577cba-d30d-4a59-ac2d-59860f1ae106" absoluteBounds="1.6400000000000006, 6.0866910807291665, 0.97, 0.2493896484375" name="Actions" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="7b43e196-811e-4487-939b-9414a4d69261" absoluteBounds="1.6400000000000006, 6.3460807291666672, 0.97, 0.24938964843750011" name="Fields" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </transitionShape>
+    <transitionShape Id="301d19ea-ba6e-4e39-8637-7e63e2e255c4" isExpanded="false" absoluteBounds="5.875, 5.125, 1, 0.25">
+      <transitionMoniker Name="/Business Epic/Review~Removed" />
+      <nestedChildShapes>
+        <elementListCompartment Id="856cfbd3-d8ed-44cd-a793-6b0deb784796" absoluteBounds="5.8900000000000006, 5.385, 0.97, 0.44169108072916663" name="Reasons" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="fbe3b52a-4552-433e-bf73-26cbad27e4bb" absoluteBounds="5.8900000000000006, 5.8366910807291665, 0.97, 0.2493896484375" name="Actions" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="7d4f2f37-0a97-4521-967e-9fd08cef9d1d" absoluteBounds="5.8900000000000006, 6.0960807291666672, 0.97, 0.24938964843750011" name="Fields" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </transitionShape>
+    <transitionShape Id="14ac9690-f6ac-4c6a-916f-3c191b92fdf5" isExpanded="false" absoluteBounds="5.5, 3.125, 1, 0.25">
+      <transitionMoniker Name="/Business Epic/Analysis~Removed" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2da4917e-c545-4f99-84f6-d1b6ebc906b9" absoluteBounds="5.5150000000000006, 3.385, 0.97, 0.44169108072916663" name="Reasons" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="6a392468-c237-496f-bbf2-4760bf013f34" absoluteBounds="5.5150000000000006, 3.8366910807291665, 0.97, 0.2493896484375" name="Actions" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="2cabf492-2eda-4189-811d-3f19d00369bb" absoluteBounds="5.5150000000000006, 4.0960807291666672, 0.97, 0.24938964843750011" name="Fields" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </transitionShape>
+    <transitionShape Id="367ef3de-0ce2-4ff9-ae36-374b27e5cbd3" isExpanded="false" absoluteBounds="10.875, 4.375, 1, 0.25">
+      <transitionMoniker Name="/Business Epic/Portfolio Backlog~Removed" />
+      <nestedChildShapes>
+        <elementListCompartment Id="60240210-4d25-46ff-a05f-86b910f92389" absoluteBounds="10.89, 4.635, 0.97, 0.44169108072916663" name="Reasons" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="9967ac5b-dd00-424c-8f46-3ee341244be7" absoluteBounds="10.89, 5.0866910807291665, 0.97, 0.2493896484375" name="Actions" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="87d01844-cd2c-4676-93ce-5ebd9a9e9ade" absoluteBounds="10.89, 5.3460807291666672, 0.97, 0.24938964843750011" name="Fields" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </transitionShape>
+    <transitionShape Id="bb945161-483c-4a1f-8d79-565a641044aa" isExpanded="false" absoluteBounds="7.625, 0.5, 1, 0.25">
+      <transitionMoniker Name="/Business Epic/Portfolio Backlog~Analysis" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f15bfd31-b90c-410c-8bce-e356288f7779" absoluteBounds="7.64, 0.75999999999999979, 0.97, 0.44169108072916663" name="Reasons" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="5ab9d327-0677-4d0d-86c2-8aa82501be29" absoluteBounds="7.64, 1.2116910807291665, 0.97, 0.2493896484375" name="Actions" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="2bac6b8d-7ac2-416e-8959-c692a7d4c8fb" absoluteBounds="7.64, 1.4710807291666668, 0.97, 0.24938964843750011" name="Fields" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </transitionShape>
+    <transitionShape Id="9f434c8b-b22c-458f-a594-be32eacd5b30" isExpanded="false" absoluteBounds="2.5, 1.75, 1, 0.25">
+      <transitionMoniker Name="/Business Epic/Review~Funnel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="07c49042-4819-4dd7-b61c-2230ca2868f1" absoluteBounds="2.5149999999999997, 2.01, 0.97, 0.44169108072916663" name="Reasons" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="9a8f11ba-7d49-4703-8765-d3f5581c1797" absoluteBounds="2.5149999999999997, 2.4616910807291665, 0.97, 0.2493896484375" name="Actions" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="be3b26f1-160d-4cef-9e72-2daeb7aaef56" absoluteBounds="2.5149999999999997, 2.7210807291666672, 0.97, 0.24938964843750011" name="Fields" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </transitionShape>
+    <transitionsToLink edgePoints="[(0.84375 : 4.625); (0.84375 : 2.01380859375)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="c6631552-cd46-4212-bb19-2f30ed9c3550">
+      <nodes>
+        <transitionShapeMoniker Id="46030fe7-5bca-4ee0-9b2e-8df8bfafa224" />
+        <stateShapeMoniker Id="6a216bcd-28b9-4c5f-9efb-4f1c66ca3d1a" />
+      </nodes>
+    </transitionsToLink>
+    <transitionsFromLink edgePoints="[(2 : 0.625); (2.25 : 0.625)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="230bd7ba-aaaa-4054-889e-782d6cf90109">
+      <nodes>
+        <stateShapeMoniker Id="6a216bcd-28b9-4c5f-9efb-4f1c66ca3d1a" />
+        <transitionShapeMoniker Id="4f1e8002-26d5-4aee-82c5-c02890a4f6ed" />
+      </nodes>
+    </transitionsFromLink>
+    <transitionsToLink edgePoints="[(2.34375 : 0.75); (2.34375 : 4.31460286458333); (3.5 : 4.31460286458333)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="c6631552-cd46-4212-bb19-2f30ed9c3550">
+      <nodes>
+        <transitionShapeMoniker Id="4f1e8002-26d5-4aee-82c5-c02890a4f6ed" />
+        <stateShapeMoniker Id="1016d6fd-0886-4b7e-846e-6d7b9343ee69" />
+      </nodes>
+    </transitionsToLink>
+    <transitionsFromLink edgePoints="[(4.6875 : 3.75); (4.6875 : 0.75)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="230bd7ba-aaaa-4054-889e-782d6cf90109">
+      <nodes>
+        <stateShapeMoniker Id="1016d6fd-0886-4b7e-846e-6d7b9343ee69" />
+        <transitionShapeMoniker Id="02e8e23b-7093-42ff-97b7-0373171d8a96" />
+      </nodes>
+    </transitionsFromLink>
+    <transitionsToLink edgePoints="[(5.375 : 0.625); (6 : 0.625)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="c6631552-cd46-4212-bb19-2f30ed9c3550">
+      <nodes>
+        <transitionShapeMoniker Id="02e8e23b-7093-42ff-97b7-0373171d8a96" />
+        <stateShapeMoniker Id="cafb3678-2fe1-48ee-8c7a-5cefa69a2146" />
+      </nodes>
+    </transitionsToLink>
+    <transitionsFromLink edgePoints="[(7.3125 : 1.62920572916667); (7.3125 : 2.125)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="230bd7ba-aaaa-4054-889e-782d6cf90109">
+      <nodes>
+        <stateShapeMoniker Id="cafb3678-2fe1-48ee-8c7a-5cefa69a2146" />
+        <transitionShapeMoniker Id="9f9ab586-2a3e-4da7-a9d5-d641b6f9e7d0" />
+      </nodes>
+    </transitionsFromLink>
+    <transitionsToLink edgePoints="[(7.59375 : 2.375); (7.59375 : 4.31460286458333); (8.125 : 4.31460286458333)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="c6631552-cd46-4212-bb19-2f30ed9c3550">
+      <nodes>
+        <transitionShapeMoniker Id="9f9ab586-2a3e-4da7-a9d5-d641b6f9e7d0" />
+        <stateShapeMoniker Id="4bc56772-dcd7-4463-a60d-57a8bc8aabf7" />
+      </nodes>
+    </transitionsToLink>
+    <transitionsFromLink edgePoints="[(9.0625 : 3.75); (9.0625 : 1.375)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="230bd7ba-aaaa-4054-889e-782d6cf90109">
+      <nodes>
+        <stateShapeMoniker Id="4bc56772-dcd7-4463-a60d-57a8bc8aabf7" />
+        <transitionShapeMoniker Id="7dee2b5b-e928-4bb0-9c22-525ee9bfedd7" />
+      </nodes>
+    </transitionsFromLink>
+    <transitionsToLink edgePoints="[(9.75 : 1.25); (10.125 : 1.25)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="c6631552-cd46-4212-bb19-2f30ed9c3550">
+      <nodes>
+        <transitionShapeMoniker Id="7dee2b5b-e928-4bb0-9c22-525ee9bfedd7" />
+        <stateShapeMoniker Id="0642ccdb-5498-4510-a024-e536fda3e9d6" />
+      </nodes>
+    </transitionsToLink>
+    <transitionsFromLink edgePoints="[(11.625 : 1.0624995); (14 : 1.0624995); (14 : 1.625)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="230bd7ba-aaaa-4054-889e-782d6cf90109">
+      <nodes>
+        <stateShapeMoniker Id="0642ccdb-5498-4510-a024-e536fda3e9d6" />
+        <transitionShapeMoniker Id="82824d15-7294-4634-ad22-77dda9192cba" />
+      </nodes>
+    </transitionsFromLink>
+    <transitionsToLink edgePoints="[(14.09375 : 1.875); (14.09375 : 3.5)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="c6631552-cd46-4212-bb19-2f30ed9c3550">
+      <nodes>
+        <transitionShapeMoniker Id="82824d15-7294-4634-ad22-77dda9192cba" />
+        <stateShapeMoniker Id="6962e6f1-8a4f-4c95-bebc-3389a5866454" />
+      </nodes>
+    </transitionsToLink>
+    <transitionsFromLink edgePoints="[(1.8125 : 2.01380859375); (1.8125 : 5.375)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="230bd7ba-aaaa-4054-889e-782d6cf90109">
+      <nodes>
+        <stateShapeMoniker Id="6a216bcd-28b9-4c5f-9efb-4f1c66ca3d1a" />
+        <transitionShapeMoniker Id="880f1b3f-d3fb-49e3-976b-30b88faf587b" />
+      </nodes>
+    </transitionsFromLink>
+    <transitionsToLink edgePoints="[(2.625 : 5.53125); (14.25 : 5.53125); (14.25 : 4.86)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="c6631552-cd46-4212-bb19-2f30ed9c3550">
+      <nodes>
+        <transitionShapeMoniker Id="880f1b3f-d3fb-49e3-976b-30b88faf587b" />
+        <stateShapeMoniker Id="0c02a1cc-b4e6-447b-9843-bd4b1a0d8586" />
+      </nodes>
+    </transitionsToLink>
+    <transitionsFromLink edgePoints="[(5 : 4.31460286458333); (6.375 : 4.31460286458333); (6.375 : 5.125)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="230bd7ba-aaaa-4054-889e-782d6cf90109">
+      <nodes>
+        <stateShapeMoniker Id="1016d6fd-0886-4b7e-846e-6d7b9343ee69" />
+        <transitionShapeMoniker Id="301d19ea-ba6e-4e39-8637-7e63e2e255c4" />
+      </nodes>
+    </transitionsFromLink>
+    <transitionsToLink edgePoints="[(6.875 : 5.25); (13.8437475 : 5.25); (13.8437475 : 4.86)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="c6631552-cd46-4212-bb19-2f30ed9c3550">
+      <nodes>
+        <transitionShapeMoniker Id="301d19ea-ba6e-4e39-8637-7e63e2e255c4" />
+        <stateShapeMoniker Id="0c02a1cc-b4e6-447b-9843-bd4b1a0d8586" />
+      </nodes>
+    </transitionsToLink>
+    <transitionsFromLink edgePoints="[(6.25 : 1.62920572916667); (6.25 : 3.125)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="230bd7ba-aaaa-4054-889e-782d6cf90109">
+      <nodes>
+        <stateShapeMoniker Id="cafb3678-2fe1-48ee-8c7a-5cefa69a2146" />
+        <transitionShapeMoniker Id="14ac9690-f6ac-4c6a-916f-3c191b92fdf5" />
+      </nodes>
+    </transitionsFromLink>
+    <transitionsToLink edgePoints="[(6.5 : 3.25); (7.51041666666667 : 3.25 : JumpStart); (7.67708333333333 : 3.25 : JumpEnd); (8.32291666666667 : 3.25 : JumpStart); (8.48958333333333 : 3.25 : JumpEnd); (8.97916666666667 : 3.25 : JumpStart); (9.14583333333333 : 3.25 : JumpEnd); (13 : 3.25); (13 : 4.17730143229167); (13.843748 : 4.17730143229167); (13.843748 : 4.5)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="c6631552-cd46-4212-bb19-2f30ed9c3550">
+      <nodes>
+        <transitionShapeMoniker Id="14ac9690-f6ac-4c6a-916f-3c191b92fdf5" />
+        <stateShapeMoniker Id="0c02a1cc-b4e6-447b-9843-bd4b1a0d8586" />
+      </nodes>
+    </transitionsToLink>
+    <transitionsFromLink edgePoints="[(9.625 : 4.5); (10.875 : 4.5)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="230bd7ba-aaaa-4054-889e-782d6cf90109">
+      <nodes>
+        <stateShapeMoniker Id="4bc56772-dcd7-4463-a60d-57a8bc8aabf7" />
+        <transitionShapeMoniker Id="367ef3de-0ce2-4ff9-ae36-374b27e5cbd3" />
+      </nodes>
+    </transitionsFromLink>
+    <transitionsToLink edgePoints="[(11.875 : 4.5625); (13.5 : 4.5625)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="c6631552-cd46-4212-bb19-2f30ed9c3550">
+      <nodes>
+        <transitionShapeMoniker Id="367ef3de-0ce2-4ff9-ae36-374b27e5cbd3" />
+        <stateShapeMoniker Id="0c02a1cc-b4e6-447b-9843-bd4b1a0d8586" />
+      </nodes>
+    </transitionsToLink>
+    <transitionsFromLink edgePoints="[(8.40625 : 3.75); (8.40625 : 0.75)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="230bd7ba-aaaa-4054-889e-782d6cf90109">
+      <nodes>
+        <stateShapeMoniker Id="4bc56772-dcd7-4463-a60d-57a8bc8aabf7" />
+        <transitionShapeMoniker Id="bb945161-483c-4a1f-8d79-565a641044aa" />
+      </nodes>
+    </transitionsFromLink>
+    <transitionsToLink edgePoints="[(7.625 : 0.625); (7.5 : 0.625)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="c6631552-cd46-4212-bb19-2f30ed9c3550">
+      <nodes>
+        <transitionShapeMoniker Id="bb945161-483c-4a1f-8d79-565a641044aa" />
+        <stateShapeMoniker Id="cafb3678-2fe1-48ee-8c7a-5cefa69a2146" />
+      </nodes>
+    </transitionsToLink>
+    <transitionsFromLink edgePoints="[(4.0937475 : 3.75); (4.0937475 : 1.875); (3.5 : 1.875)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="230bd7ba-aaaa-4054-889e-782d6cf90109">
+      <nodes>
+        <stateShapeMoniker Id="1016d6fd-0886-4b7e-846e-6d7b9343ee69" />
+        <transitionShapeMoniker Id="9f434c8b-b22c-458f-a594-be32eacd5b30" />
+      </nodes>
+    </transitionsFromLink>
+    <transitionsToLink edgePoints="[(2.5 : 1.875); (2.42708333333333 : 1.875 : JumpStart); (2.26041666666667 : 1.875 : JumpEnd); (2 : 1.875)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="c6631552-cd46-4212-bb19-2f30ed9c3550">
+      <nodes>
+        <transitionShapeMoniker Id="9f434c8b-b22c-458f-a594-be32eacd5b30" />
+        <stateShapeMoniker Id="6a216bcd-28b9-4c5f-9efb-4f1c66ca3d1a" />
+      </nodes>
+    </transitionsToLink>
+  </nestedChildShapes>
+</wITWorkflow>
