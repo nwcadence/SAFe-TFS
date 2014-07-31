@@ -3,6 +3,7 @@
   <WORKITEMTYPE name="Refactor">
     <DESCRIPTION>Tracks an activity the user will be able to perform with the product</DESCRIPTION>
     <FIELDS>
+	  <FIELD name="Acceptance Criteria" refname="Microsoft.VSTS.Common.AcceptanceCriteria" type="HTML" />
       <FIELD name="Id" refname="System.Id" type="Integer" reportable="dimension" />
       <FIELD name="Title" refname="System.Title" type="String" reportable="dimension">
         <REQUIRED />
@@ -402,9 +403,14 @@
         <Group>
           <Column PercentWidth="70">
             <TabGroup>
-              <Tab Label="Details">
-                <Control FieldName="System.Description" Type="HtmlFieldControl" Dock="Fill" />
-              </Tab>
+              <Group>
+				  <Column PercentWidth="50">
+				    <Control FieldName="System.Description" Type="HtmlFieldControl" Dock="Fill" Label="Description" LabelPosition="Top"/>
+				  </Column>
+				  <Column PercentWidth="50">
+					<Control FieldName="Microsoft.VSTS.Common.AcceptanceCriteria" Type="HtmlFieldControl" Dock="Fill" Label="Acceptance Criteria" LabelPosition="Top"/>
+				  </Column>
+				</Group>
               <Tab Label="Storyboards">
                 <Control Type="LinksControl" Name="StoryboardsControl">
                   <LinksControlOptions>
@@ -500,8 +506,6 @@
                 <Group Label="Planning">
                   <Column PercentWidth="100">
                     <Control FieldName="Microsoft.VSTS.Scheduling.StoryPoints" Type="FieldControl" Label="Story Points" LabelPosition="Left" />
-                    <Control FieldName="Microsoft.VSTS.Common.Risk" Type="FieldControl" Label="Risk" LabelPosition="Left" />
-                    <Control FieldName="Microsoft.VSTS.Common.StackRank" Type="FieldControl" Label="Stack Rank" LabelPosition="Left" />
                   </Column>
                 </Group>
                 <Group Label="Classification">
