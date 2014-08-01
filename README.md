@@ -1,6 +1,7 @@
 SAFe-TFS
 ========
 *************** Release 3.0.0 ***********************
+
 Major purpose of release: Finish customizing the fields and each work item type and make changes necessary to align with SAFe 3.0
 
 Notes:
